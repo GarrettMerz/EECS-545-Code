@@ -1,0 +1,28 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{feynmp}
+\unitlength=1mm
+\begin{document}
+\begin{fmffile}{FeynDiag_Z4l_schannel-feyn}
+  \begin{fmfgraph*}(60,40)
+    \fmfleft{i0,inf2,i1,inf1,i2}
+    \fmfright{outlep2,outlep4,outlep3,outempty,outlep1}
+    \fmflabel{$q$}{inf1}
+    \fmflabel{$\bar{q}$}{inf2}
+    \fmflabel{$\ell^-$}{outlep1}
+    \fmflabel{$\ell^+$}{outlep2}
+    \fmflabel{$\ell^-$}{outlep3}
+    \fmflabel{$\ell^+$}{outlep4}
+    \fmf{fermion,tension=1.5}{inf1,v1,inf2}
+    \fmf{photon,tension=2,label=$Z/\gamma^*$,l.s=left}{v1,v2}
+    \fmf{fermion}{v2,outlep1}
+    \fmf{phantom}{outlep2,v2}
+    \fmffreeze
+    \fmf{fermion}{outlep2,v3}
+    \fmf{plain,tension=2.5}{v3,v2} % this tension determines where the second Z/gam radiates
+    \fmffreeze
+    \fmf{photon,label=$Z^*/\gamma^*$,l.s=left}{v3,v4}
+    \fmf{fermion}{outlep4,v4,outlep3}
+  \end{fmfgraph*}
+\end{fmffile}
+\end{document}

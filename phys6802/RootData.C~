@@ -1,0 +1,50 @@
+#include <TRandom3.h>
+#include <iostream>
+#include <TMath.h>
+#include <Riostream.h>
+using namespace std;
+
+
+void RootData(int opt = 3)
+{
+
+	TCanvas *c1 = new TCanvas("c1","RootData",200,10,700,500);
+	ifstream in;
+	in.open("WB20_32.shi");
+
+	Float_t x,y,z;
+	Int_t nlines = 0;
+	TH1F *f = new TH1F("f","500V Data",20,0,0.4);
+	TH1F *g = new TH1F("g","GetRandom Data",20,0,0.4);
+	TH1F *h = new TH1F("h","Landau Distribution",20,-3,15);	
+	   
+	while (1)
+	{ 
+	in >> x >> y;
+	if (!in.good())
+		{break;}
+	if (nlines < 5)
+		{cout << x<< "  " << y << endl;}
+	f->Fill(y);
+	nlines++;
+	}
+
+	for (Int_t i=0; i < 100000; i++)
+	{
+	z=f->GetRandom();
+	g->Fill(z);
+	}
+
+	h->FillRandom("landau", 1000);
+
+	in.close();
+
+	if (opt == 1)
+	{f->Draw();}
+	else if (opt == 2)
+	{g->Draw();} 
+	else if (opt == 3)
+	{h->Draw();} 
+
+}
+

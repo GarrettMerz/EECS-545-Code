@@ -1,0 +1,66 @@
+The datasets for this analysis are recorded using single-lepton and dilepton triggers.
+The transverse momentum (\pt{}) thresholds of these triggers vary from 20 to 24~\GeV{}
+for the single-lepton triggers and from 8 to 13~\GeV{} for the dilepton triggers,
+depending on lepton flavor and data-taking period.
+The overall trigger efficiency for \Zllll{} events ranges from
+94 to 99\%.
+
+After removing the short data-taking periods having problems that affect the lepton reconstruction,
+the total integrated luminosity used in the analysis is
+\LumiSevenTeV{} at 7~\TeV{} and \LumiEightTeV{} at 8~\TeV{}.
+The overall uncertainty on the integrated luminosity 
+is $\LumiUncertaintySevenTeV{}$~\cite{lumi7tev}
+and $\LumiUncertaintyEightTeV{}$~\footnote{
+The 2012 luminosity measurement follows the same methodology as that detailed in Ref.~\cite{lumi7tev}. It is based
+on a preliminary calibration of the luminosity scale derived from beam-separation scans performed in November 2012.
+}
+for the $\sqrt s$ = 7 and 8~\TeV{} datasets, respectively. 
+
+The \progname{Powheg} Monte Carlo (MC) program~\cite{Melia:2011tj,Alioli:2010xd,Nason:2004rx},
+used to calculate the signal cross sections,
+includes perturbative QCD corrections to next-to-leading order.
+The calculation also includes the interference terms
+between the \mbox{$s$-channel} and the \mbox{$t$-channel} as well as
+the interference terms between the $Z$ and the $\gamma^*$ diagrams.
+The CT10~\cite{Lai:2010vv} set of parton distribution functions (PDFs) and 
+QCD renormalization and factorization
+scales of $\mu_\mathrm{R}, \mu_\mathrm{F} = m_{4\ell}$ are used.
+In the $m_{\ell^+\ell^-} > 5$~\GeV{} and $80 < m_{4\ell} < 100$~\GeV{} phase space,
+the production \xsecs{} calculated by \progname{Powheg} are
+$53.4\pm 1.2$ fb ($45.8\pm 1.1$ fb) for the sum of the $4e$ and $4\mu$ final states, and
+$51.5\pm 1.2$ fb ($44.2\pm 1.1$ fb) for the $2e2\mu$ final state at 8~\TeV{} (7~\TeV{}).
+The cross sections for $4e$ and $4\mu$ are larger than for $2e2\mu$ due to
+the interference between the two same-flavor lepton pairs.
+The expected fraction of 4$\ell$ events produced via the \mbox{$t$-channel} process, $f_t$, is
+\TChanFracSame{} and \TChanFracDiff{}
+for same-flavor ($4e$, $4\mu$) and mixed-flavor ($2e2\mu$) final states, respectively,
+for both 7 and 8~\TeV{}.
+The $gg\rightarrow ZZ\rightarrow 4\ell$ process is
+modeled by \progname{gg2zz}~\cite{Binoth:2008pr}, 
+and the 4$\ell$ event fraction from this process
+is calculated to be around 0.1\%.
+The overall non-resonant fraction ($f_{\mathrm{nr}}$)
+from the $t$-channel and $gg$ contributions combined is
+($3.45\pm 0.02$)\% and ($4.00\pm 0.02$)\%
+for the same-flavor and mixed-flavor final states, respectively. 
+To generate MC events with a simulation of the detector to determine the signal acceptance,
+\progname{Powheg} is interfaced to \progname{Pythia6}~\cite{pythia} 
+or \progname{Pythia8}~\cite{pythia8} for showering and hadronization
+and to \progname{Photos}~\cite{Golonka:2005pn} for radiated photons from charged leptons.
+
+The MC generators used to simulate the reducible background contributions
+are \progname{MC@NLO}~\cite{bib:mcatnlo} (to model $t\bar t$ and single-top production)
+and \progname{Alpgen}~\cite{Mangano:2002ea} (to model \Z{}~boson 
+production in association with jets, referred to as $Z$+jets).
+These generators are interfaced to \progname{Herwig}~\cite{herwig} and \progname{Jimmy}~\cite{Jimmy}
+for parton showering and underlying-event simulations.
+The diboson background processes 
+\WZ{} and $Z\gamma$, and $Z^{(*)}Z^{(*)}\rightarrow 4\ell $ decays involving $\tau\rightarrow e/\mu+2\nu$,
+are modeled by
+\progname{Powheg} (interfaced to \progname{Pythia} for parton showering) and
+\progname{Sherpa}~\cite{Gleisberg:2008ta}.
+
+The detector response simulation~\cite{simuAtlas} is based on the GEANT4 program~\cite{bib:geant4a}.
+Additional inelastic $pp$ interactions (referred to as pile-up)  are included in the simulation, and
+events are re-weighted to reproduce the observed distribution of the average number of collisions per
+bunch-crossing in the data. 

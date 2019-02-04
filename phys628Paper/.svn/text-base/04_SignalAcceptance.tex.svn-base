@@ -1,0 +1,59 @@
+The overall signal selection efficiency 
+is the product of efficiency and acceptance factors, \Cllll{} and \Allll{}, respectively.
+The efficiency factor \Cllll{} is the ratio of
+the number of \Zllll{} events passing the reconstructed event selections
+to the number in the fiducial region,
+and is determined using the signal MC samples after the detector simulation.
+The fiducial region, defined at the MC generator level 
+using the lepton four-momenta, requires
+$p_\mathrm{T} > 20, 15, 10(8), 7(4)$~\GeV{} 
+and $|\eta| < 2.5(2.7)$ of the $p_\mathrm{T}$-ordered $e(\mu)$,
+$\Delta R(\ell, \ell') > 0.1(0.2)$ for all same(different)-flavor lepton pairs,
+$m_{\ell^+\ell^-} > 20$~\GeV{} for at least one lepton pair,
+$m_{\ell^+\ell^-} >  5$~\GeV{} for all same-flavor lepton pairs,
+and $80 < m_{4\ell} < 100$~\GeV{}.
+The four-momenta of all final state photons
+within $\Delta R = 0.1$ of a lepton are summed into the four-momentum of that lepton.
+The acceptance factor \Allll{} is the fraction
+of \Zllll{} events in the final phase space 
+which falls into the fiducial region.
+The \Cllll{} uncertainty is mostly experimental
+and the \Allll{} uncertainty is entirely theoretical.
+The \Allll{} and \Cllll{} values
+are listed in Table~\ref{tab:xsec} for each channel and dataset.
+The \Cllll{} values for 8~\TeV{} are larger than for 7~\TeV{} due to a variety of factors,
+including electron identification improvements with better bremsstrahlung treatment 
+and additional muon detector coverage.
+
+The MC lepton identification and trigger efficiencies are corrected based on studies performed in data control regions.
+The energy and momentum scales and resolutions
+of the MC events are calibrated to reproduce data
+from $Z\rightarrow \ell^+\ell^-$ and $J/\psi \rightarrow \ell^+\ell^-$ decays.
+The uncertainties on the \Zllll{} signal detection efficiency
+are determined by varying the nominal calibrations
+(including lepton energy and momentum resolutions and scales,
+and the trigger, reconstruction and identification efficiencies)
+in the MC samples by one standard deviation.
+For the 8~\TeV{} (7~\TeV{}) analysis,
+the relative uncertainties on the $C_{4\ell}$ factors are
+\UCTotalMMEightTeVSummary{} (2.7\%),     
+\UCTotalEMEightTeVSummary{} (4.9\%),
+\UCTotalMEEightTeVSummary{} (9.8\%),
+and \UCTotalEEEightTeVSummary{} (14.9\%)
+for $\mu\mu+\mu\mu$, $ee+\mu\mu$, $\mu\mu+ee$, and $ee+ee$, respectively,
+where the labeling $\ell\ell+\ell'\ell'$ indicates the leading and sub-leading lepton pairs.
+The major uncertainty contributions come from the lepton reconstruction 
+and identification efficiencies.
+
+The relative uncertainties on the $A_{4\ell}$ factors, 
+evaluated using \progname{Powheg} MC samples,
+range from 1.3\% to 1.7\% depending on channel.
+The theoretical uncertainties reflect uncertainties
+from the choice of QCD scales and PDFs.
+The scales are varied independently from 0.5 to 2.0 times 
+the nominal $\mu_\mathrm{R}, \mu_\mathrm{F} = m_{4\ell}$.
+The PDF uncertainties are estimated by 
+taking the sum in quadrature of the deviations of $A_{4\ell}$ for each
+PDF error set (52 CT10 eigenvectors varied by one standard deviation)
+and for an alternative PDF set, MSTW2008~\cite{bib:MSTW2008},
+with respect to the nominal one.

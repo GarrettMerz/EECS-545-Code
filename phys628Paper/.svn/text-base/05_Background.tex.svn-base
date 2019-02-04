@@ -1,0 +1,41 @@
+The overall background 
+in the selected 4$\ell$ event sample is estimated to be below 1\%,
+as shown in Table~\ref{tab:xsec}.
+The background contributions 
+from diboson production are estimated, using MC simulations,
+to be $0.06 \pm 0.01$ and $0.49 \pm 0.04$ events
+in the 7 and 8~\TeV{} datasets, respectively.
+Background contributions from $Z$+jets and top production processes
+are estimated from data. 
+Such background events
+may contain two isolated leptons from $\Z$ decays or from $\W$ decays in top events,
+together with additional activity such as heavy-flavor jets
+or misidentified components of jets yielding reconstructed leptons.
+These backgrounds are estimated from data using a background-enriched control 
+sample of $\ell\ell j_\ell j_\ell$ events,
+selected with the standard signal requirements
+except that lepton-like jets, $j_\ell$, are selected in place of two of the signal leptons.
+Electron-like jets, $j_e$,  in the $\ell\ell j_\ell j_\ell$ control sample 
+are obtained from electromagnetic clusters matched
+to tracks in the ID that do not satisfy the identification criteria or isolation requirements.
+Muon-like jets, $j_\mu$, are defined as muon candidates that fail the requirements
+on isolation.
+The reducible background in the signal sample is estimated by scaling each event
+in the $\ell\ell j_\ell j_\ell$ control sample by $f_1\times f_2$, 
+where the factor 
+$f_i$ ($i=1,2$)
+for each of the two lepton-like jets
+depends on lepton flavor and \pt{}.
+The factor $f$ is the ratio of the probability for a jet to
+satisfy the signal lepton selection criteria
+to the probability for the jet to satisfy the lepton-like jet criteria,
+and is obtained from independent jet-enriched 
+data samples dominated by $Z$+jets or $t\bar t$ events.
+The uncertainties on $f$ are determined from the variations of $f$ in data samples obtained
+with alternative lepton-like jet selections and
+different jet compositions.
+The estimated background from $Z$+jets and top processes
+ranges from 0.05 to 0.20 events for the different channels and datasets;
+for all 4$\ell$ channels combined it is estimated 
+to be \BkgATotalTotalSRSevenTeV{} and \BkgATotalTotalSREightTeV{} events
+for the 7 and 8~\TeV{} data, respectively.

@@ -1,0 +1,155 @@
+\def\AC@PackageVersion{0.1}
+
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{preprintcover}
+[13/02/2012 v.0.1 Preprint Cover Page]
+
+\typeout{********************************}
+\typeout{*** Preprint Cover Page v.\AC@PackageVersion ***}
+\typeout{********************************}
+
+\let\if@AC@ClearPage\iffalse
+\DeclareOption{clearpage}{\let\if@AC@ClearPage\iftrue}
+\let\if@AC@UseFromAtlasNote\iffalse
+\DeclareOption{atlasnote}{\let\if@AC@UseFromAtlasNote\iftrue}
+
+\let\AC@AdvancePageTwoSided\relax
+\ProcessOptions\relax
+
+\headsep=0.1in
+
+\newdimen\AC@PreprintCoverWidth
+\newdimen\AC@PreprintCoverHeight
+
+\AC@PreprintCoverWidth=21 cm
+\AC@PreprintCoverHeight=29.7 cm
+\advance\AC@PreprintCoverWidth by -1.5in
+\advance\AC@PreprintCoverHeight by -1.5in
+
+\g@addto@macro\bfseries{\boldmath}
+
+\def\AC@PaperTitle{Paper title}
+\newcommand{\PreprintCoverPaperTitle}[1]{\def\AC@PaperTitle{#1}}
+\def\AC@PreprintNumber{}
+\newcommand{\PreprintIdNumber}[1]{\def\AC@PreprintNumber{#1}}
+\def\AC@PreprintAbstract{}
+\newcommand{\PreprintCoverAbstract}[1]{\def\AC@PreprintAbstract{#1}}
+\def\AC@PreprintJournal{}
+\newcommand{\PreprintJournalName}[1]{\def\AC@PreprintJournal{#1}}
+
+\newcommand{\AC@PrintPreprintCover}{
+	\bgroup\global\setbox255\vbox{%
+		\@ifpackageloaded{jheppub}{%
+			\vspace*{1in}%
+			\noindent\hspace*{.7in}%
+		}{%
+    			\vspace*{-.25in}%
+    			\noindent\hspace*{-.25in}%
+		}
+    		\rlap{\begin{minipage}[t][\AC@PreprintCoverHeight][c]{\AC@PreprintCoverWidth}%
+        			{\PreprintCoverHeader}%
+        			\vfill%
+        			{\PreprintCoverBody}%
+        			\vfill%
+        			{\PreprintCoverFooter}%
+      		\end{minipage}}%
+  	}
+  	\egroup\shipout\box255
+  	\if@AC@ClearPage 
+  	\bgroup\global\setbox255\vbox{}
+  	\egroup\shipout\box255
+  	\fi
+}
+
+\newcommand{\PreprintCoverHeader}{%
+	\RequirePackage{graphicx}
+	\parbox[t]{\linewidth}{%
+    		{
+			\centering
+      			\fontfamily{phv}\fontseries{m}\fontsize{14}{16.8}\selectfont 
+      			EUROPEAN ORGANISATION FOR NUCLEAR RESEARCH (CERN) \\
+    		}
+		\vspace*{8mm}
+		{	
+			\centering
+			\IfFileExists{AC_atlaslogo.pdf}{%
+                         	\includegraphics[height=30mm]{AC_atlaslogo.pdf}
+                       	}{\IfFileExists{AC_atlaslogo.eps}{%
+				\includegraphics[height=30mm]{AC_atlaslogo}
+				}{\mbox{}}
+			}
+			\hspace*{120mm}
+                		\IfFileExists{compasslogo.pdf}{%
+				\includegraphics[height=25mm]{compasslogo.pdf}
+                		}{\IfFileExists{compasslogo.eps}{%
+				\includegraphics[height=25mm]{compasslogo}
+                			}{\mbox{}}
+                    	}
+		}
+		\vspace*{-5mm}
+		{
+			\flushright
+      			\fontfamily{phv}\fontseries{m}\fontsize{13}{15.6}\selectfont 
+      			\AC@PreprintNumber \par
+   		}
+		\vspace*{-1mm}
+		{
+			\flushright
+			\fontfamily{phv}\fontseries{m}\fontsize{11}{13.2}\selectfont 
+      			Submitted to: \AC@PreprintJournal \par
+		}
+		\rule{\linewidth}{1pt}\par
+		\vspace*{20mm}
+		{
+			\centering
+			\fontfamily{phv}\bfseries\fontsize{16}{19.2}\selectfont 
+			\AC@PaperTitle \par
+		}
+		\vspace*{20mm}
+		{
+			\centering
+			\fontfamily{phv}\fontseries{m}\fontsize{12}{14.4}\selectfont
+			The ATLAS Collaboration \\
+		}
+		\vspace*{20mm}
+		{
+			\centering
+			\fontfamily{phv}\bfseries\fontsize{11}{13.2}\selectfont
+			Abstract \\
+		}
+		\vspace*{5mm}
+		{
+		\linespread{1.1}	
+			{
+			\if\AC@PreprintAbstract\@empty\mbox{}%
+  			\else%
+			\fontfamily{phv}\fontseries{m}\fontsize{11}{13.2}\selectfont
+			\hspace*{15\p@}\AC@PreprintAbstract \par
+			\fi
+			}
+		}
+  	}%
+}
+
+\newcommand{\PreprintCoverBody}{%
+
+}
+
+\newcommand{\PreprintCoverFooter}{%
+
+\small{ \copyright \ \the\year \ CERN for the benefit of the ATLAS
+  Collaboration.\\
+Reproduction of this article or parts of it is allowed as specified in
+the CC-BY-3.0 license.}
+}
+
+\AtBeginDocument{
+  \if@AC@UseFromAtlasNote%
+  \relax%
+  \else%
+  \AC@PrintPreprintCover%
+  \AC@AdvancePageTwoSided%
+  \fi
+}
+
+\endinput

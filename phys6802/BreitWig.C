@@ -1,0 +1,48 @@
+#include <TRandom3.h>
+#include <iostream>
+#include <TMath.h>
+using namespace std;
+
+
+void BreitWig()
+{
+	TRandom3 r(1234);
+	Double_t WMass= 80.385;
+	Double_t WWidth= 0.227;
+
+	TCanvas *c1 = new TCanvas("c1","BreitWig",200,10,700,500);
+	TH1F *WPeak = new TH1F("W Resonance","W Resonance",50,75,100);
+	TH1F *WDist = new TH1F("W Differential Cross-section","W Differential Cross-section",100,0,55);
+	TH1F *MT = new TH1F("Transverse Mass","Transverse Mass",100,0,110);
+	TF1 *BreitWig= new TF1("BreitWig", "TMath::BreitWigner(x, 80.385, 0.227)", 75, 100);
+	TF1 *DiffCross= new TF1("DiffCross", "(1*4*x/([1]*[1]))*(1/sqrt(1-4*x*x/([1]*[1]))+sqrt(1-4*x*x/([1]*[1])))", 0, 55);	
+
+	for (Int_t i=0; i < 1000000; i++)
+	{
+	z= BreitWig->GetRandom();
+	DiffCross->SetParameters(1, z);
+	z2= DiffCross->GetRandom();
+	WPeak->Fill(z);
+	WDist->Fill(z2);
+	MT->Fill(2*z2);
+	}
+
+	MT->Draw();
+	MT->GetXaxis()-> SetTitle("Transverse Mass (GeV)");
+	MT->GetYaxis()-> SetTitle("Events");
+	
+//	WDist->Draw();
+//	WDist->GetXaxis()-> SetTitle("Lepton Pt");
+//	WDist->GetYaxis()-> SetTitle("Scaled #frac{d#sigma}{dPt}");
+
+
+
+//	WPeak->Draw();
+//	WPeak->GetXaxis()-> SetTitle("Energy (GeV)");
+//	WPeak->GetYaxis()-> SetTitle("Events");
+	
+	
+return; 
+
+}
+

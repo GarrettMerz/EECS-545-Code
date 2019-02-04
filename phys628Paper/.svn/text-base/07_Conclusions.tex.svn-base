@@ -1,0 +1,21 @@
+In summary, measurements of the \xsecs{} of 4$\ell$ production
+at the $Z$~resonance in $pp$ collision
+data collected by the ATLAS detector at the LHC have been presented.
+The datasets analyzed correspond to an integrated luminosity of
+\LumiSevenTeV{} and \LumiEightTeV{} 
+at $\sqrt{s}$ = 7 and 8~\TeV{}, respectively.
+The total \Zllll{} production \xsecs{}
+in the phase-space region $m_{\ell^+\ell^-}>5$~\GeV{}
+and $80 < m_{4\ell} < 100$~\GeV{}
+are measured to be $\SigPS{}$ = 
+$76\pm 18 \text { (stat) } \pm 4 \text { (syst) } \pm 1.4 \text { (lumi) }$ fb
+at 7~\TeV{}
+and 
+$107\pm 9 \text{ (stat) } \pm 4 \text{ (syst) } \pm 3.0 \text { (lumi) }$ fb
+at 8~\TeV{}, 
+consistent with the SM predictions of 
+\PhaseSpaceXsecTheorySevenTeV{} and \PhaseSpaceXsecTheoryEightTeV{}, respectively.
+Normalizing to the measured $Z\rightarrow \mu^+ \mu^-$ production,
+the $Z \rightarrow 4\ell$ branching fraction  
+is determined to be \ObsBranching{},
+consistent with the SM prediction of \ExpectedBranching{}.

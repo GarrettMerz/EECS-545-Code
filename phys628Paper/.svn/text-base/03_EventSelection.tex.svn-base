@@ -1,0 +1,127 @@
+The \Zllll{} event selection closely follows the 
+$H \rightarrow ZZ^* \rightarrow 4\ell$ analysis~\cite{Aad2012-higgs}
+with muon \pt{}
+and dilepton invariant mass requirements loosened
+to increase the acceptance for the \Zllll{} process.
+
+Muons are identified by tracks (or track segments) reconstructed in the muon spectrometer
+and are matched to tracks reconstructed in the ID.
+The muon momentum is calculated by combining the information from the two subsystems,
+correcting for the energy lost in the calorimeters.
+Additionally, one muon in each event is allowed to be a 
+stand-alone muon 
+or a calorimeter-tagged muon, 
+where the stand-alone muon is 
+identified by only a muon spectrometer track in $2.5<|\eta|<2.7$,
+and the calorimeter-tagged muon is identified by an ID track with \pt{} $>$ 15~\GeV{}
+associated with a compatible calorimeter energy deposit in $|\eta|<0.1$.
+All muon candidates are required to have \pt{} $>$ 4~\GeV{} and $|\eta|<2.7$.
+
+Electrons are reconstructed from energy deposits in the electromagnetic calorimeter
+matched to a track in the ID~\cite{egammanote}.  
+Tracks associated with electromagnetic clusters are fitted using a Gaussian Sum Filter~\cite{egammaGSF},
+which allows bremsstrahlung energy losses to be taken into account.
+For $\sqrt{s}=8$~\TeV{} data, improved 
+electron discrimination from jets is obtained using a likelihood function formed from
+parameters characterizing the shower shape and track association,
+resulting in a reduction of the electron misidentification rate by more than a factor of two
+compared to that at 7 TeV.
+Electron candidates are required to have \pt{} $>$ 7~\GeV{} and $|\eta| < 2.47$.
+
+Collision events are selected by requiring at least one reconstructed vertex
+with at least three charged particle tracks with \pt{} $>$ 0.4~\GeV{}.
+If more than one vertex satisfies the selection requirement,
+the primary vertex is chosen as the one with the highest  $\sum p_{\mathrm{T}}^2$, 
+summed over all tracks associated with the vertex.
+
+In order to reject electrons and muons from jets, only isolated leptons are selected, requiring
+the scalar sum of the transverse momenta, $\sum p_{\mathrm{T}}$, of other tracks inside a cone size of
+$\Delta R = \sqrt{(\Delta\eta)^2 + (\Delta\phi)^2} = 0.2$ around the lepton to be less than 15\%
+of the lepton \pt{}.
+In addition, the $\sum \ET$ deposited in calorimeter cells inside a cone size of
+$\Delta R = 0.2$ around the lepton direction, excluding the transverse energy due to the lepton and
+corrected for the expected pile-up contribution, 
+is required to be less than 30\% of the lepton \pt{}, reduced to
+20\% for electrons in the 8~\TeV{} dataset and 15\% for stand-alone muons.
+To further reject leptons from heavy-flavor jets,
+the impact parameter relative to the primary vertex
+is required to be less than
+3.5 (6.0) standard deviations for all muons (electrons),
+where the looser electron requirement allows for tails in the electron impact parameter distribution due to bremsstrahlung in the ID.
+\begin{figure*}
+\begin{tabular}{ccc}
+\includegraphics[width=.3\linewidth]{fig02a.pdf} &
+\includegraphics[width=.3\linewidth]{fig02b.pdf} &
+\includegraphics[width=.3\linewidth]{fig02c.pdf} \\
+\end{tabular}
+\caption{
+Invariant mass distributions of (a) the leading lepton pair, $m_{12}$, (b) the subleading lepton pair, $m_{34}$ ,
+and (c) the four-lepton system, $m_{4\ell}$.
+The MC simulation expectation for a combination of all channels is compared to 
+$\sqrt{s}$ = 7 and 8~\TeV{} data.
+All selections are applied except in (c) there is no $m_{4\ell}$ requirement.
+The background contributes $< 1\%$ of the total expected signal (invisible in the plots).
+}
+\label{fig:z4l_mass}
+\end{figure*}
+
+Candidate quadruplets are formed by
+selecting two opposite-sign, same-flavor dilepton pairs in an event.
+The four leptons of the quadruplets are required to be well separated,
+$\Delta R >0.1$ for same-flavor lepton pairs and $\Delta R >0.2$ for $e \mu$ pairs.
+The two leading leptons must have \pt{} $>$ 20~\GeV{} and \pt{} $>$ 15~\GeV{}.
+The third lepton must have \pt{} $>$ 10 (8)~\GeV{} if it is an electron (muon).
+The dilepton pair with greatest invariant mass (denoted $m_{12}$) is called the leading lepton pair,
+while the sub-leading lepton pair is chosen to have the largest
+invariant mass (denoted $m_{34}$) among the remaining possible pairs.
+The dilepton masses must satisfy $m_{12} > 20$~\GeV{} and $m_{34} > 5$~\GeV{}.
+In the $4e$ and $4\mu$ channels
+all same-flavor, opposite-sign lepton pairs 
+are required to have $m_{\ell^+\ell^-} > 5$~\GeV{}.
+This helps to reject events containing $J/\psi\rightarrow \ell^+\ell^-$ decays.
+The invariant mass
+of the lepton quadruplet is restricted to $80 < m_{4\ell} < 100$~\GeV{}.
+A total of \ObsAllSevenTeV{} and \ObsAllEightTeV{}
+\Zllll{} candidate events are selected in the 7 and 8~\TeV{} datasets, respectively.
+The distributions of $m_{12}$, $m_{34}$, and $m_{4\ell}$ are shown in Fig.~\ref{fig:z4l_mass}.
+The number of events observed in each channel is shown in Table~\ref{tab:xsec}.
+The $2e2\mu$ channel is divided into $ee+ \mu\mu$ and $\mu\mu + ee$ channels
+indicating the lepton flavors of the leading and sub-leading lepton pairs.
+
+\begin{table*}
+  \caption{Summary of
+    the observed (\NObs{}) and expected (\NExp{}) 
+    number of selected \Zllll{} candidate events,
+    and the estimated number of background events (\NBkg{})
+    in each 4$\ell$ channel
+    for $\sqrt{s}$ = 7 and 8~\TeV{}. The associated uncertainties are statistical and systematic combined.
+    The central values of the acceptance and efficiency factors (\Allll{}) and (\Cllll{}),
+    the measured fiducial \xsecs{} (\SigFid{}),
+    and the total \xsecs{} for $m_{\ell^+\ell^-} > 5$~\GeV{}, $80 < m_{4\ell} < 100$~\GeV{} (\SigPS{})
+    are also presented.
+    The fiducial regions are defined in the text and are different for each channel.
+    The \SigPS{} are given for same-flavor ($4e$ and $4\mu$), different-flavor ($2e2\mu$), 
+    and all channels combined. 
+    The uncertainties on \SigFid{} and \SigPS{} are the statistical 
+    and systematic uncertainties, and the uncertainty due to the luminosity measurement.
+  }
+  \label{tab:xsec}
+  \begin{ruledtabular}
+  \newcommand{\twrw}[1]{\multirow{2}{*}{#1}}
+  \begin{tabular}{llcccccclc}
+    $\sqrt{s}$ & $4\ell$ state   & \NObs{}            & \NExp{}                      & \NBkg{}               & \Cllll{}               & \SigFid{} [fb]                      & \Allll{}               &                           & \SigPS{} [fb]                                \\
+    \hline
+    7~\TeV{}   & $ee+ee$         & \ObsEEEESevenTeV{} & \ExpectedTotalEEEESevenTeV{} & \ExpBkgEEEESevenTeV{} & \CzfourlEEEESevenTeV{} & \FiducialXsecObsEEEESevenTeV{} & \AzfourlEEEESevenTeV{} & \twrw{$\Big\}\; 4e,4\mu$} & \twrw{\PhaseSpaceXsecObsSameSevenTeVPlain{}} \\
+               & $\mu\mu+\mu\mu$ & \ObsMMMMSevenTeV{} & \ExpectedTotalMMMMSevenTeV{} & \ExpBkgMMMMSevenTeV{} & \CzfourlMMMMSevenTeV{} & \FiducialXsecObsMMMMSevenTeV{} & \AzfourlMMMMSevenTeV{} &                           &                                              \\
+               & $ee+\mu\mu$     & \ObsEEMMSevenTeV{} & \ExpectedTotalEEMMSevenTeV{} & \ExpBkgEEMMSevenTeV{} & \CzfourlEEMMSevenTeV{} & \FiducialXsecObsEEMMSevenTeV{} & \AzfourlEEMMSevenTeV{} & \twrw{$\Big\}\; 2e2\mu$}  & \twrw{\PhaseSpaceXsecObsMixSevenTeVPlain{}}  \\
+               & $\mu\mu+ee$     & \ObsMMEESevenTeV{} & \ExpectedTotalMMEESevenTeV{} & \ExpBkgMMEESevenTeV{} & \CzfourlMMEESevenTeV{} & \FiducialXsecObsMMEESevenTeV{} & \AzfourlMMEESevenTeV{} &                           &                                              \\
+               & combined        & \ObsAllSevenTeV{}  & \ExpectedTotalAllSevenTeV{}  & \ExpBkgAllSevenTeV{}  &                        &                                     &                        &                           & \PhaseSpaceXsecObsSevenTeVPlain{}            \\
+  \hline
+    8~\TeV{}   & $ee+ee$         & \ObsEEEEEightTeV{} & \ExpectedTotalEEEEEightTeV{} & \ExpBkgEEEEEightTeV{} & \CzfourlEEEEEightTeV{} & \FiducialXsecObsEEEEEightTeV{} & \AzfourlEEEEEightTeV{} & \twrw{$\Big\}\; 4e,4\mu$} & \twrw{\PhaseSpaceXsecObsSameEightTeVPlain{}} \\
+               & $\mu\mu+\mu\mu$ & \ObsMMMMEightTeV{} & \ExpectedTotalMMMMEightTeV{} & \ExpBkgMMMMEightTeV{} & \CzfourlMMMMEightTeV{} & \FiducialXsecObsMMMMEightTeV{} & \AzfourlMMMMEightTeV{} &                           &                                              \\
+               & $ee+\mu\mu$     & \ObsEEMMEightTeV{} & \ExpectedTotalEEMMEightTeV{} & \ExpBkgEEMMEightTeV{} & \CzfourlEEMMEightTeV{} & \FiducialXsecObsEEMMEightTeV{} & \AzfourlEEMMEightTeV{} & \twrw{$\Big\}\; 2e2\mu$}  & \twrw{\PhaseSpaceXsecObsMixEightTeVPlain{}}  \\
+               & $\mu\mu+ee$     & \ObsMMEEEightTeV{} & \ExpectedTotalMMEEEightTeV{} & \ExpBkgMMEEEightTeV{} & \CzfourlMMEEEightTeV{} & \FiducialXsecObsMMEEEightTeV{} & \AzfourlMMEEEightTeV{} &                           &                                              \\
+               & combined        & \ObsAllEightTeV{}  & \ExpectedTotalAllEightTeV{}  & \ExpBkgAllEightTeV{}  &                        &                                     &                        &                           & \PhaseSpaceXsecObsEightTeVPlain{}            \\
+  \end{tabular}
+  \end{ruledtabular}
+\end{table*}

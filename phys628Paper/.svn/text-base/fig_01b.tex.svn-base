@@ -1,0 +1,23 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{feynmp}
+\unitlength=1mm
+\begin{document}
+\begin{fmffile}{FeynDiag_Z4l_tchannel-feyn}
+  \begin{fmfgraph*}(50,40)
+    \fmfleft{inf2,inf1}
+    \fmfright{outlep4,outlep3,outlep2,outlep1}
+    \fmflabel{$q$}{inf1}
+    \fmflabel{$\bar{q}$}{inf2}
+    \fmflabel{$\ell^-$}{outlep1}
+    \fmflabel{$\ell^+$}{outlep2}
+    \fmf{fermion}{inf1,v1,v3,inf2}
+    \fmf{photon,label=$Z^*/\gamma^*$,l.s=left}{v1,v2}
+    \fmf{photon,label=$Z^*/\gamma^*$,l.s=left}{v3,v4}
+    \fmf{fermion}{outlep2,v2,outlep1}
+    \fmf{fermion}{outlep3,v4,outlep4}
+    \fmflabel{$\ell^-$}{outlep3}
+    \fmflabel{$\ell^+$}{outlep4}
+  \end{fmfgraph*}
+\end{fmffile}
+\end{document}

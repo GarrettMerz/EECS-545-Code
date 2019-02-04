@@ -1,0 +1,122 @@
+\documentclass[
+aps,
+prl,
+reprint,
+showpacs,
+]{revtex4-1}
+\pdfoutput=1
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{preprintcover}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage[hyperindex,breaklinks,hidelinks,colorlinks,allcolors=blue]{hyperref} 
+
+\newcommand{\Xsec}{Cross section}
+\newcommand{\Xsecs}{Cross sections}
+\newcommand{\xsec}{cross section}
+\newcommand{\xsecs}{cross sections}
+
+\def\TeV{\ifmmode {\mathrm{\ Te\kern -0.1em V}}\else
+                   \textrm{Te\kern -0.1em V}\fi}
+\def\GeV{\ifmmode {\mathrm{\ Ge\kern -0.1em V}}\else
+                   \textrm{Ge\kern -0.1em V}\fi}
+\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
+\newcommand{\W}{\ensuremath{W}}
+\newcommand{\Z}{\ensuremath{Z}}
+\newcommand{\Wpm}{\ensuremath{W^{\pm}}}
+\newcommand{\Zzero}{\ensuremath{Z}}
+\newcommand{\WZ}{\ensuremath{\W\Zzero}}
+\def\Wplus{\ensuremath{W^+}}
+\def\Wminus{\ensuremath{W^-}}
+\newcommand{\WW}{\ensuremath{\Wplus\Wminus}}
+\def\pt{\ensuremath{p_{\mathrm{T}}}}
+\def\ET{\ensuremath{E_{\mathrm{T}}}}
+\def\GeV{\ifmmode {\mathrm{\ Ge\kern -0.1em V}}\else
+                   \textrm{Ge\kern -0.1em V}\fi}%
+\newcommand {\NIM}    {Nucl.{} Instrum.{} Meth.{} }
+
+\def\progname#1{{\sc #1}}
+\newcommand{\SingleZllll}{\ensuremath{Z\rightarrow 4\ell}}
+\newcommand{\Zllll}{\SingleZllll}
+\newcommand{\zzllll}{\ensuremath{\ZZ\to\ll\ell^{\prime+}\ell^{\prime-}}}
+\newcommand{\ZllllFrac}{\ensuremath{\Gamma_{\SingleZllll{}}/\Gamma_{Z}}}
+\newcommand{\ZllllFracDisp}{\ensuremath{\frac{\Gamma_{\SingleZllll{}}}{\Gamma_{Z}}}}
+\newcommand{\ZmmFrac}{\ensuremath{\Gamma_{Z\rightarrow\mu\mu}/\Gamma_{Z}}}
+\newcommand{\ZmmFracDisp}{\ensuremath{\frac{\Gamma_{Z\rightarrow\mu\mu}}{\Gamma_{Z}}}}
+\newcommand{\Cllll}{\ensuremath{C_{4\ell}}}
+\newcommand{\Allll}{\ensuremath{A_{4\ell}}}
+\newcommand{\CAmumu}{\ensuremath{(C \times A)_{2\mu}}}
+\newcommand{\SigFid}{\ensuremath{\sigma^{\text{fid}}_{Z4\ell}}}
+\newcommand{\SigPS}{\ensuremath{\sigma_{Z4\ell}}}
+\newcommand{\NObs}{\ensuremath{N_{4\ell}^{\text{obs}}}}
+\newcommand{\NExp}{\ensuremath{N_{4\ell}^{\text{exp}}}}
+\newcommand{\NBkg}{\ensuremath{N_{4\ell}^{\text{bkg}}}}
+\newcommand{\NObsMuMu}{\ensuremath{N_{2\mu}^{\text{obs}}}}
+\newcommand{\NBkgMuMu}{\ensuremath{N_{2\mu}^{\text{bkg}}}}
+
+\newcommand{\eeee}{\ensuremath{\ee\ee}}
+\newcommand{\eemumu}{\ensuremath{\ee\mumu}}
+\newcommand{\mumumumu}{\ensuremath{\mumu\mumu}}
+\newcommand{\llll}{\ensuremath{\ll\ell^{\prime+}\ell^{\prime-}}}
+
+
+\input{Numbers.tex}
+
+\PreprintCoverPaperTitle{\protect\input{00_Title.tex}}
+
+\PreprintIdNumber{CERN-PH-EP-2014-047}
+
+\PreprintJournalName{Phys. Rev. Lett.}
+
+\PreprintCoverAbstract{\input{00_Abstract}}
+
+\begin{document}
+
+\title{\protect\input{00_Title.tex}}
+
+\author{G. Aad \textit{et al.}}
+\collaboration{ATLAS Collaboration}
+
+\begin{abstract}
+\protect\input{00_Abstract}
+\end{abstract}
+
+\pacs{13.38.Dg}
+
+\maketitle
+
+\label{sec:Introduction}
+\input{01_Introduction.tex}
+
+\label{sec:Data}
+\input{02_Data.tex}
+
+\label{sec:EventSelection}
+\input{03_EventSelection}
+
+\label{sec:SignalAcceptance}
+\input{04_SignalAcceptance.tex}
+
+\label{sec:Background}
+\input{05_Background.tex}
+
+\label{sec:Results}
+\input{06_Results.tex}
+
+\label{sec:Conclusion}
+\input{07_Conclusions.tex}
+
+\begin{acknowledgments}
+\input{Acknowledgements.tex}
+\end{acknowledgments}
+
+\bibliographystyle{atlasBibStyleWoTitle}
+\bibliography{Z4Leptons}{}
+
+\onecolumngrid
+\newpage
+\input{atlas_authlist.tex}
+
+\end{document}
