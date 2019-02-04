@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Util.A.html">
+<link rel="next" href="Util.Ht.html">
+<link rel="Up" href="Util.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.L</title>
+</head>
+<body>
+<div class="navbar"><a href="Util.A.html">Previous</a>
+&nbsp;<a href="Util.html">Up</a>
+&nbsp;<a href="Util.Ht.html">Next</a>
+</div>
+<center><h1>Module <a href="type_Util.L.html">Util.L</a></h1></center>
+<br>
+<pre><span class="keyword">module</span> L: <code class="code">sig</code> <a href="Util.L.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">include</span> List</pre>
+<pre><span class="keyword">val</span> <a name="VALiter2i"></a><a href="code_VALUtil.L.iter2i.html">iter2i</a> : <code class="type">(int -> 'a -> 'b -> 'c) -> 'a list -> 'b list -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALswiter"></a><a href="code_VALUtil.L.switer.html">switer</a> : <code class="type">'a list -> ('a -> unit) -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALswiteri"></a><a href="code_VALUtil.L.switeri.html">switeri</a> : <code class="type">'a list -> (int -> 'a -> 'b) -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALswiter2"></a><a href="code_VALUtil.L.switer2.html">switer2</a> : <code class="type">'a list -> 'b list -> ('a -> 'b -> unit) -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALswiter2i"></a><a href="code_VALUtil.L.switer2i.html">switer2i</a> : <code class="type">'a list -> 'b list -> (int -> 'a -> 'b -> 'c) -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALsmap"></a><a href="code_VALUtil.L.smap.html">smap</a> : <code class="type">'a list -> ('a -> 'b) -> 'b list</code></pre><pre><span class="keyword">val</span> <a name="VALsmapi"></a><a href="code_VALUtil.L.smapi.html">smapi</a> : <code class="type">'a list -> ('a -> 'b) -> 'b list</code></pre><pre><span class="keyword">val</span> <a name="VALsmap2"></a><a href="code_VALUtil.L.smap2.html">smap2</a> : <code class="type">'a list -> 'b list -> ('a -> 'b -> 'c) -> 'c list</code></pre><pre><span class="keyword">val</span> <a name="VALall_same"></a><a href="code_VALUtil.L.all_same.html">all_same</a> : <code class="type">'a list -> bool</code></pre><pre><span class="keyword">val</span> <a name="VALis_empty"></a><a href="code_VALUtil.L.is_empty.html">is_empty</a> : <code class="type">'a list -> bool</code></pre><pre><span class="keyword">val</span> <a name="VALof_str"></a><a href="code_VALUtil.L.of_str.html">of_str</a> : <code class="type">btw:string -> l:string -> r:string -> (string -> 'a) -> string -> 'a list</code></pre><pre><span class="keyword">val</span> <a name="VALof_str1"></a><a href="code_VALUtil.L.of_str1.html">of_str1</a> : <code class="type">(string -> 'a) -> string -> 'a list</code></pre><pre><span class="keyword">val</span> <a name="VALof_str2"></a><a href="code_VALUtil.L.of_str2.html">of_str2</a> : <code class="type">(string -> 'a) -> string -> 'a list</code></pre><pre><span class="keyword">val</span> <a name="VALto_str"></a><a href="code_VALUtil.L.to_str.html">to_str</a> : <code class="type">btw:string -> l:string -> r:string -> ('a -> string) -> 'a list -> string</code></pre><pre><span class="keyword">val</span> <a name="VALto_str1"></a><a href="code_VALUtil.L.to_str1.html">to_str1</a> : <code class="type">('a -> string) -> 'a list -> string</code></pre><pre><span class="keyword">val</span> <a name="VALto_str2"></a><a href="code_VALUtil.L.to_str2.html">to_str2</a> : <code class="type">('a -> string) -> 'a list -> string</code></pre><pre><span class="keyword">val</span> <a name="VALcount"></a><a href="code_VALUtil.L.count.html">count</a> : <code class="type">'a list -> 'a -> int</code></pre><pre><span class="keyword">val</span> <a name="VALunique"></a><a href="code_VALUtil.L.unique.html">unique</a> : <code class="type">'a list -> 'a list</code></pre><pre><span class="keyword">val</span> <a name="VALrange"></a><a href="code_VALUtil.L.range.html">range</a> : <code class="type">int -> int -> int list</code></pre><pre><span class="keyword">val</span> <a name="VALtranspose1"></a><a href="code_VALUtil.L.transpose1.html">transpose1</a> : <code class="type">'a list list -> 'a list list</code></pre><div class="info">
+transposes a list of lists as if it were a matrix<br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALtranspose2"></a><a href="code_VALUtil.L.transpose2.html">transpose2</a> : <code class="type">'a list list -> 'a list list</code></pre><pre><span class="keyword">val</span> <a name="VALtranspose"></a><a href="code_VALUtil.L.transpose.html">transpose</a> : <code class="type">'a list list -> 'a list list</code></pre><pre><span class="keyword">val</span> <a name="VALmap_filter"></a><a href="code_VALUtil.L.map_filter.html">map_filter</a> : <code class="type">('a -> 'b option) -> 'a list -> 'b list</code></pre></body></html>

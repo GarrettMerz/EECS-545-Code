@@ -1,0 +1,261 @@
+START	<d:0	<
+<d:0	<d:1	d
+<d:1
+START	hn:0	h
+hn:0	hn:1	n
+hn:1
+START	bhn:0	b
+bhn:0	bhn:1	h
+bhn:1	bhn:2	n
+bhn:2
+START	hnk:0	h
+hnk:0	hnk:1	n
+hnk:1	hnk:2	k
+hnk:2
+START	hnnw:0	h
+hnnw:0	hnnw:1	n
+hnnw:1	hnnw:2	n
+hnnw:2	hnnw:3	w
+hnnw:3
+START	hnny:0	h
+hnny:0	hnny:1	n
+hnny:1	hnny:2	n
+hnny:2	hnny:3	y
+hnny:3
+START	mbk:0	m
+mbk:0	mbk:1	b
+mbk:1	mbk:2	k
+mbk:2
+START	mbkm:0	m
+mbkm:0	mbkm:1	b
+mbkm:1	mbkm:2	k
+mbkm:2	mbkm:3	m
+mbkm:3
+START	bk:0	b
+bk:0	bk:1	k
+bk:1
+START	lhm:0	l
+lhm:0	lhm:1	h
+lhm:1	lhm:2	m
+lhm:2
+START	lhn:0	l
+lhn:0	lhn:1	h
+lhn:1	lhn:2	n
+lhn:2
+START	lw:0	l
+lw:0	lw:1	w
+lw:1
+START	btwk:0	b
+btwk:0	btwk:1	t
+btwk:1	btwk:2	w
+btwk:2	btwk:3	k
+btwk:3
+START	twk:0	t
+twk:0	twk:1	w
+twk:1	twk:2	k
+twk:2
+START	wbtwk:0	w
+wbtwk:0	wbtwk:1	b
+wbtwk:1	wbtwk:2	t
+wbtwk:2	wbtwk:3	w
+wbtwk:3	wbtwk:4	k
+wbtwk:4
+START	Hy:0	H
+Hy:0	Hy:1	y
+Hy:1
+START	kHy:0	k
+kHy:0	kHy:1	H
+kHy:1	kHy:2	y
+kHy:2
+START	ayn:0	a
+ayn:0	ayn:1	y
+ayn:1	ayn:2	n
+ayn:2
+START	kayn:0	k
+kayn:0	kayn:1	a
+kayn:1	kayn:2	y
+kayn:2	kayn:3	n
+kayn:3
+START	wayn:0	w
+wayn:0	wayn:1	a
+wayn:1	wayn:2	y
+wayn:2	wayn:3	n
+wayn:3
+START	bly:0	b
+bly:0	bly:1	l
+bly:1	bly:2	y
+bly:2
+START	wbly:0	w
+wbly:0	wbly:1	b
+wbly:1	wbly:2	l
+wbly:2	wbly:3	y
+wbly:3
+START	lbly:0	l
+lbly:0	lbly:1	b
+lbly:1	lbly:2	l
+lbly:2	lbly:3	y
+lbly:3
+START	mad:0	m
+mad:0	mad:1	a
+mad:1	mad:2	d
+mad:2
+START	bmad:0	b
+bmad:0	bmad:1	m
+bmad:1	bmad:2	a
+bmad:2	bmad:3	d
+bmad:3
+START	zh:0	z
+zh:0	zh:1	h
+zh:1
+START	kn:0	k
+kn:0	kn:1	n
+kn:1
+START	wkn:0	w
+wkn:0	wkn:1	k
+wkn:1	wkn:2	n
+wkn:2
+START	anky:0	a
+anky:0	anky:1	n
+anky:1	anky:2	k
+anky:2	anky:3	y
+anky:3
+START	kanky:0	k
+kanky:0	kanky:1	a
+kanky:1	kanky:2	n
+kanky:2	kanky:3	k
+kanky:3	kanky:4	y
+kanky:4
+START	wanky:0	w
+wanky:0	wanky:1	a
+wanky:1	wanky:2	n
+wanky:2	wanky:3	k
+wanky:3	wanky:4	y
+wanky:4
+START	bhm:0	b
+bhm:0	bhm:1	h
+bhm:1	bhm:2	m
+bhm:2
+START	hm:0	h
+hm:0	hm:1	m
+hm:1
+START	whm:0	w
+whm:0	whm:1	h
+whm:1	whm:2	m
+whm:2
+START	bh:0	b
+bh:0	bh:1	h
+bh:1
+START	wbh:0	w
+wbh:0	wbh:1	b
+wbh:1	wbh:2	h
+wbh:2
+START	kbh:0	k
+kbh:0	kbh:1	b
+kbh:1	kbh:2	h
+kbh:2
+START	wbhm:0	w
+wbhm:0	wbhm:1	b
+wbhm:1	wbhm:2	h
+wbhm:2	wbhm:3	m
+wbhm:3
+START	bw:0	b
+bw:0	bw:1	w
+bw:1
+START	kbw:0	k
+kbw:0	kbw:1	b
+kbw:1	kbw:2	w
+kbw:2
+START	aHd:0	a
+aHd:0	aHd:1	H
+aHd:1	aHd:2	d
+aHd:2
+START	laHd:0	l
+laHd:0	laHd:1	a
+laHd:1	laHd:2	H
+laHd:2	laHd:3	d
+laHd:3
+START	waHd:0	w
+waHd:0	waHd:1	a
+waHd:1	waHd:2	H
+waHd:2	waHd:3	d
+waHd:3
+START	at:0	a
+at:0	at:1	t
+at:1
+START	wat:0	w
+wat:0	wat:1	a
+wat:1	wat:2	t
+wat:2
+START	ly:0	l
+ly:0	ly:1	y
+ly:1
+START	wly:0	w
+wly:0	wly:1	l
+wly:1	wly:2	y
+wly:2
+START	ph:0	p
+ph:0	ph:1	h
+ph:1
+START	wph:0	w
+wph:0	wph:1	p
+wph:1	wph:2	h
+wph:2
+START	hwa:0	h
+hwa:0	hwa:1	w
+hwa:1	hwa:2	a
+hwa:2
+START	whwa:0	w
+whwa:0	whwa:1	h
+whwa:1	whwa:2	w
+whwa:2	whwa:3	a
+whwa:3
+START	aw:0	a
+aw:0	aw:1	w
+aw:1
+START	gm:0	g
+gm:0	gm:1	m
+gm:1
+START	lkm:0	l
+lkm:0	lkm:1	k
+lkm:1	lkm:2	m
+lkm:2
+START	lkn:0	l
+lkn:0	lkn:1	k
+lkn:1	lkn:2	n
+lkn:2
+START	hya:0	h
+hya:0	hya:1	y
+hya:1	hya:2	a
+hya:2
+START	ayh:0	a
+ayh:0	ayh:1	y
+ayh:1	ayh:2	h
+ayh:2
+START	ayk:0	a
+ayk:0	ayk:1	y
+ayk:1	ayk:2	k
+ayk:2
+START	ak:0	a
+ak:0	ak:1	k
+ak:1
+START	mn:0	m
+mn:0	mn:1	n
+mn:1
+START	my:0	m
+my:0	my:1	y
+my:1
+START	$m:0	$
+$m:0	$m:1	m
+$m:1
+START	ky:0	k
+ky:0	ky:1	y
+ky:1
+START	yHdw:0	y
+yHdw:0	yHdw:1	H
+yHdw:1	yHdw:2	d
+yHdw:2	yHdw:3	w
+yHdw:3
+START	by:0	b
+by:0	by:1	y
+by:1
+END

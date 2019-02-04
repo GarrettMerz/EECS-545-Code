@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Util.L.html">
+<link rel="next" href="Util.S.html">
+<link rel="Up" href="Util.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.Ht</title>
+</head>
+<body>
+<div class="navbar"><a href="Util.L.html">Previous</a>
+&nbsp;<a href="Util.html">Up</a>
+&nbsp;<a href="Util.S.html">Next</a>
+</div>
+<center><h1>Module <a href="type_Util.Ht.html">Util.Ht</a></h1></center>
+<br>
+<pre><span class="keyword">module</span> Ht: <code class="code">sig</code> <a href="Util.Ht.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<pre><span class="keyword">include</span> Hashtbl</pre>
+<pre><span class="keyword">val</span> <a name="VALadd_int"></a><a href="code_VALUtil.Ht.add_int.html">add_int</a> : <code class="type">('a, int) t -> 'a -> int -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALadd_float"></a><a href="code_VALUtil.Ht.add_float.html">add_float</a> : <code class="type">('a, float) t -> 'a -> float -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALincr"></a><a href="code_VALUtil.Ht.incr.html">incr</a> : <code class="type">('a, int) t -> 'a -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALdecr"></a><a href="code_VALUtil.Ht.decr.html">decr</a> : <code class="type">('a, int) t -> 'a -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALincr'"></a><a href="code_VALUtil.Ht.incr'.html">incr'</a> : <code class="type">('a, float) t -> 'a -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALdecr'"></a><a href="code_VALUtil.Ht.decr'.html">decr'</a> : <code class="type">('a, float) t -> 'a -> unit</code></pre><pre><span class="keyword">val</span> <a name="VALget"></a><a href="code_VALUtil.Ht.get.html">get</a> : <code class="type">('a, 'b) t -> 'a -> 'b -> 'b</code></pre><pre><span class="keyword">val</span> <a name="VALto_str"></a><a href="code_VALUtil.Ht.to_str.html">to_str</a> : <code class="type">('a -> string) -><br>       ('b -> string) -> string -> string -> 'c -> string -> ('a, 'b) t -> string</code></pre><pre><span class="keyword">val</span> <a name="VALto_str1"></a><a href="code_VALUtil.Ht.to_str1.html">to_str1</a> : <code class="type">('a -> string) -> ('b -> string) -> ('a, 'b) t -> string</code></pre><pre><span class="keyword">val</span> <a name="VALof_file"></a><a href="code_VALUtil.Ht.of_file.html">of_file</a> : <code class="type">(string -> 'a) -> (string -> 'b) -> string -> ('a, 'b) t</code></pre><div class="info">
+<code class="code">of_file key_fun val_fun fn</code> returns a hashtable from a file <code class="code">fn</code>.  Each line of 
+<code class="code">fn</code> should contain a key,value pair separated by tab<br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALof_arrays"></a><a href="code_VALUtil.Ht.of_arrays.html">of_arrays</a> : <code class="type">'a array -> 'b array -> ('a, 'b) t</code></pre><div class="info">
+<code class="code">of_arrays k v</code> returns a hashtable where <code class="code">k.(i)</code> -&gt; <code class="code">v.(i)</code> for each <code class="code">i</code>.<br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALof_array"></a><a href="code_VALUtil.Ht.of_array.html">of_array</a> : <code class="type">'a array -> ('a, int) Util.Hashtbl.t</code></pre><div class="info">
+<code class="code">of_array a</code> returns a hashtable <code class="code">h</code> where <code class="code">Ht.find h elt = i</code>, for some <code class="code">i</code> s.t. <code class="code">a.(i) = elt</code><br>
+</div>
+<pre><span class="keyword">val</span> <a name="VALto_array"></a><a href="code_VALUtil.Ht.to_array.html">to_array</a> : <code class="type">('a, 'b) t -> ('a * 'b) array</code></pre><pre><span class="keyword">val</span> <a name="VALto_sorted_array"></a><a href="code_VALUtil.Ht.to_sorted_array.html">to_sorted_array</a> : <code class="type">('a, 'b) t -> ('a * 'b) array</code></pre><pre><span class="keyword">val</span> <a name="VALto_rev_sorted_array"></a><a href="code_VALUtil.Ht.to_rev_sorted_array.html">to_rev_sorted_array</a> : <code class="type">('a, 'b) t -> ('a * 'b) array</code></pre><pre><span class="keyword">val</span> <a name="VALinit"></a><a href="code_VALUtil.Ht.init.html">init</a> : <code class="type">'a array -> ('a -> 'b) -> ('a, 'b) t</code></pre></body></html>

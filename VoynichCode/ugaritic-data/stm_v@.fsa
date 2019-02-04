@@ -1,0 +1,512 @@
+START	brk:0	b
+brk:0	brk:1	r
+brk:1	brk:2	k
+brk:2
+START	aHz:0	a
+aHz:0	aHz:1	H
+aHz:1	aHz:2	z
+aHz:2
+START	qd$:0	q
+qd$:0	qd$:1	d
+qd$:1	qd$:2	$
+qd$:2
+START	asp:0	a
+asp:0	asp:1	s
+asp:1	asp:2	p
+asp:2
+START	lbn:0	l
+lbn:0	lbn:1	b
+lbn:1	lbn:2	n
+lbn:2
+START	qrb:0	q
+qrb:0	qrb:1	r
+qrb:1	qrb:2	b
+qrb:2
+START	$lm:0	$
+$lm:0	$lm:1	l
+$lm:1	$lm:2	m
+$lm:2
+START	kbd:0	k
+kbd:0	kbd:1	b
+kbd:1	kbd:2	d
+kbd:2
+START	qra:0	q
+qra:0	qra:1	r
+qra:1	qra:2	a
+qra:2
+START	Hr$:0	H
+Hr$:0	Hr$:1	r
+Hr$:1	Hr$:2	$
+Hr$:2
+START	mHS:0	m
+mHS:0	mHS:1	H
+mHS:1	mHS:2	S
+mHS:2
+START	<zr:0	<
+<zr:0	<zr:1	z
+<zr:1	<zr:2	r
+<zr:2
+START	akl:0	a
+akl:0	akl:1	k
+akl:1	akl:2	l
+akl:2
+START	$ql:0	$
+$ql:0	$ql:1	q
+$ql:1	$ql:2	l
+$ql:2
+START	lb$:0	l
+lb$:0	lb$:1	b
+lb$:1	lb$:2	$
+lb$:2
+START	b&r:0	b
+b&r:0	b&r:1	&
+b&r:1	b&r:2	r
+b&r:2
+START	zbH:0	z
+zbH:0	zbH:1	b
+zbH:1	zbH:2	H
+zbH:2
+START	lHm:0	l
+lHm:0	lHm:1	H
+lHm:1	lHm:2	m
+lHm:2
+START	qbr:0	q
+qbr:0	qbr:1	b
+qbr:1	qbr:2	r
+qbr:2
+START	<zb:0	<
+<zb:0	<zb:1	z
+<zb:1	<zb:2	b
+<zb:2
+START	$kn:0	$
+$kn:0	$kn:1	k
+$kn:1	$kn:2	n
+$kn:2
+START	lmd:0	l
+lmd:0	lmd:1	m
+lmd:1	lmd:2	d
+lmd:2
+START	<l:0	<
+<l:0	<l:1	l
+<l:1
+START	qdm:0	q
+qdm:0	qdm:1	d
+qdm:1	qdm:2	m
+qdm:2
+START	gr$:0	g
+gr$:0	gr$:1	r
+gr$:1	gr$:2	$
+gr$:2
+START	lqH:0	l
+lqH:0	lqH:1	q
+lqH:1	lqH:2	H
+lqH:2
+START	$m<:0	$
+$m<:0	$m<:1	m
+$m<:1	$m<:2	<
+$m<:2
+START	ySa:0	y
+ySa:0	ySa:1	S
+ySa:1	ySa:2	a
+ySa:2
+START	<n:0	<
+<n:0	<n:1	n
+<n:1
+START	ptH:0	p
+ptH:0	ptH:1	t
+ptH:1	ptH:2	H
+ptH:2
+START	zr<:0	z
+zr<:0	zr<:1	r
+zr<:1	zr<:2	<
+zr<:2
+START	Sr:0	S
+Sr:0	Sr:1	r
+Sr:1
+START	zmr:0	z
+zmr:0	zmr:1	m
+zmr:1	zmr:2	r
+zmr:2
+START	Sd:0	S
+Sd:0	Sd:1	d
+Sd:1
+START	Hlq:0	H
+Hlq:0	Hlq:1	l
+Hlq:1	Hlq:2	q
+Hlq:2
+START	spr:0	s
+spr:0	spr:1	p
+spr:1	spr:2	r
+spr:2
+START	dm:0	d
+dm:0	dm:1	m
+dm:1
+START	tn:0	t
+tn:0	tn:1	n
+tn:1
+START	l$n:0	l
+l$n:0	l$n:1	$
+l$n:1	l$n:2	n
+l$n:2
+START	&mH:0	&
+&mH:0	&mH:1	m
+&mH:1	&mH:2	H
+&mH:2
+START	$lH:0	$
+$lH:0	$lH:1	l
+$lH:1	$lH:2	H
+$lH:2
+START	rwm:0	r
+rwm:0	rwm:1	w
+rwm:1	rwm:2	m
+rwm:2
+START	SHq:0	S
+SHq:0	SHq:1	H
+SHq:1	SHq:2	q
+SHq:2
+START	d<:0	d
+d<:0	d<:1	<
+d<:1
+START	dn:0	d
+dn:0	dn:1	n
+dn:1
+START	mla:0	m
+mla:0	mla:1	l
+mla:1	mla:2	a
+mla:2
+START	$al:0	$
+$al:0	$al:1	a
+$al:1	$al:2	l
+$al:2
+START	qry:0	q
+qry:0	qry:1	r
+qry:1	qry:2	y
+qry:2
+START	sgr:0	s
+sgr:0	sgr:1	g
+sgr:1	sgr:2	r
+sgr:2
+START	Hbq:0	H
+Hbq:0	Hbq:1	b
+Hbq:1	Hbq:2	q
+Hbq:2
+START	lk:0	l
+lk:0	lk:1	k
+lk:1
+START	rHS:0	r
+rHS:0	rHS:1	H
+rHS:1	rHS:2	S
+rHS:2
+START	mSa:0	m
+mSa:0	mSa:1	S
+mSa:1	mSa:2	a
+mSa:2
+START	dbr:0	d
+dbr:0	dbr:1	b
+dbr:1	dbr:2	r
+dbr:2
+START	dr:0	d
+dr:0	dr:1	r
+dr:1
+START	bk:0	b
+bk:0	bk:1	k
+bk:1
+START	plT:0	p
+plT:0	plT:1	l
+plT:1	plT:2	T
+plT:2
+START	Sq:0	S
+Sq:0	Sq:1	q
+Sq:1
+START	Spn:0	S
+Spn:0	Spn:1	p
+Spn:1	Spn:2	n
+Spn:2
+START	Sma:0	S
+Sma:0	Sma:1	m
+Sma:1	Sma:2	a
+Sma:2
+START	npl:0	n
+npl:0	npl:1	p
+npl:1	npl:2	l
+npl:2
+START	p<r:0	p
+p<r:0	p<r:1	<
+p<r:1	p<r:2	r
+p<r:2
+START	prd:0	p
+prd:0	prd:1	r
+prd:1	prd:2	d
+prd:2
+START	qH:0	q
+qH:0	qH:1	H
+qH:1
+START	gmr:0	g
+gmr:0	gmr:1	m
+gmr:1	gmr:2	r
+gmr:2
+START	adm:0	a
+adm:0	adm:1	d
+adm:1	adm:2	m
+adm:2
+START	b<r:0	b
+b<r:0	b<r:1	<
+b<r:1	b<r:2	r
+b<r:2
+START	Smd:0	S
+Smd:0	Smd:1	m
+Smd:1	Smd:2	d
+Smd:2
+START	qnh:0	q
+qnh:0	qnh:1	n
+qnh:1	qnh:2	h
+qnh:2
+START	bq$:0	b
+bq$:0	bq$:1	q
+bq$:1	bq$:2	$
+bq$:2
+START	abd:0	a
+abd:0	abd:1	b
+abd:1	abd:2	d
+abd:2
+START	$kb:0	$
+$kb:0	$kb:1	k
+$kb:1	$kb:2	b
+$kb:2
+START	$br:0	$
+$br:0	$br:1	b
+$br:1	$br:2	r
+$br:2
+START	TbH:0	T
+TbH:0	TbH:1	b
+TbH:1	TbH:2	H
+TbH:2
+START	rd:0	r
+rd:0	rd:1	d
+rd:1
+START	$b:0	$
+$b:0	$b:1	b
+$b:1
+START	Swq:0	S
+Swq:0	Swq:1	w
+Swq:1	Swq:2	q
+Swq:2
+START	mwt:0	m
+mwt:0	mwt:1	w
+mwt:1	mwt:2	t
+mwt:2
+START	ark:0	a
+ark:0	ark:1	r
+ark:1	ark:2	k
+ark:2
+START	pl:0	p
+pl:0	pl:1	l
+pl:1
+START	bnh:0	b
+bnh:0	bnh:1	n
+bnh:1	bnh:2	h
+bnh:2
+START	qwm:0	q
+qwm:0	qwm:1	w
+qwm:1	qwm:2	m
+qwm:2
+START	$pT:0	$
+$pT:0	$pT:1	p
+$pT:1	$pT:2	T
+$pT:2
+START	n$q:0	n
+n$q:0	n$q:1	$
+n$q:1	n$q:2	q
+n$q:2
+START	&tm:0	&
+&tm:0	&tm:1	t
+&tm:1	&tm:2	m
+&tm:2
+START	gl:0	g
+gl:0	gl:1	l
+gl:1
+START	b$l:0	b
+b$l:0	b$l:1	$
+b$l:1	b$l:2	l
+b$l:2
+START	plg:0	p
+plg:0	plg:1	l
+plg:1	plg:2	g
+plg:2
+START	gly:0	g
+gly:0	gly:1	l
+gly:1	gly:2	y
+gly:2
+START	<tr:0	<
+<tr:0	<tr:1	t
+<tr:1	<tr:2	r
+<tr:2
+START	glh:0	g
+glh:0	glh:1	l
+glh:1	glh:2	h
+glh:2
+START	Sa:0	S
+Sa:0	Sa:1	a
+Sa:1
+START	$q:0	$
+$q:0	$q:1	q
+$q:1
+START	prq:0	p
+prq:0	prq:1	r
+prq:1	prq:2	q
+prq:2
+START	hpk:0	h
+hpk:0	hpk:1	p
+hpk:1	hpk:2	k
+hpk:2
+START	$kr:0	$
+$kr:0	$kr:1	k
+$kr:1	$kr:2	r
+$kr:2
+START	HSb:0	H
+HSb:0	HSb:1	S
+HSb:1	HSb:2	b
+HSb:2
+START	THn:0	T
+THn:0	THn:1	H
+THn:1	THn:2	n
+THn:2
+START	pdh:0	p
+pdh:0	pdh:1	d
+pdh:1	pdh:2	h
+pdh:2
+START	g<r:0	g
+g<r:0	g<r:1	<
+g<r:1	g<r:2	r
+g<r:2
+START	$kH:0	$
+$kH:0	$kH:1	k
+$kH:1	$kH:2	H
+$kH:2
+START	$wb:0	$
+$wb:0	$wb:1	w
+$wb:1	$wb:2	b
+$wb:2
+START	qny:0	q
+qny:0	qny:1	n
+qny:1	qny:2	y
+qny:2
+START	$th:0	$
+$th:0	$th:1	t
+$th:1	$th:2	h
+$th:2
+START	<lh:0	<
+<lh:0	<lh:1	l
+<lh:1	<lh:2	h
+<lh:2
+START	H&k:0	H
+H&k:0	H&k:1	&
+H&k:1	H&k:2	k
+H&k:2
+START	$pH:0	$
+$pH:0	$pH:1	p
+$pH:1	$pH:2	H
+$pH:2
+START	zmn:0	z
+zmn:0	zmn:1	m
+zmn:1	zmn:2	n
+zmn:2
+START	pTr:0	p
+pTr:0	pTr:1	T
+pTr:1	pTr:2	r
+pTr:2
+START	mSh:0	m
+mSh:0	mSh:1	S
+mSh:1	mSh:2	h
+mSh:2
+START	gl$:0	g
+gl$:0	gl$:1	l
+gl$:1	gl$:2	$
+gl$:2
+START	SmH:0	S
+SmH:0	SmH:1	m
+SmH:1	SmH:2	H
+SmH:2
+START	Sb:0	S
+Sb:0	Sb:1	b
+Sb:1
+START	hrg:0	h
+hrg:0	hrg:1	r
+hrg:1	hrg:2	g
+hrg:2
+START	gzl:0	g
+gzl:0	gzl:1	z
+gzl:1	gzl:2	l
+gzl:2
+START	pqd:0	p
+pqd:0	pqd:1	q
+pqd:1	pqd:2	d
+pqd:2
+START	bkh:0	b
+bkh:0	bkh:1	k
+bkh:1	bkh:2	h
+bkh:2
+START	ld:0	l
+ld:0	ld:1	d
+ld:1
+START	$HT:0	$
+$HT:0	$HT:1	H
+$HT:1	$HT:2	T
+$HT:2
+START	ntk:0	n
+ntk:0	ntk:1	t
+ntk:1	ntk:2	k
+ntk:2
+START	bq<:0	b
+bq<:0	bq<:1	q
+bq<:1	bq<:2	<
+bq<:2
+START	ktb:0	k
+ktb:0	ktb:1	t
+ktb:1	ktb:2	b
+ktb:2
+START	bl<:0	b
+bl<:0	bl<:1	l
+bl<:1	bl<:2	<
+bl<:2
+START	pr&:0	p
+pr&:0	pr&:1	r
+pr&:1	pr&:2	&
+pr&:2
+START	qSr:0	q
+qSr:0	qSr:1	S
+qSr:1	qSr:2	r
+qSr:2
+START	mlS:0	m
+mlS:0	mlS:1	l
+mlS:1	mlS:2	S
+mlS:2
+START	gnb:0	g
+gnb:0	gnb:1	n
+gnb:1	gnb:2	b
+gnb:2
+START	mHh:0	m
+mHh:0	mHh:1	H
+mHh:1	mHh:2	h
+mHh:2
+START	Hnp:0	H
+Hnp:0	Hnp:1	n
+Hnp:1	Hnp:2	p
+Hnp:2
+START	qnz:0	q
+qnz:0	qnz:1	n
+qnz:1	qnz:2	z
+qnz:2
+START	nsk:0	n
+nsk:0	nsk:1	s
+nsk:1	nsk:2	k
+nsk:2
+START	zHl:0	z
+zHl:0	zHl:1	H
+zHl:1	zHl:2	l
+zHl:2
+START	nSb:0	n
+nSb:0	nSb:1	S
+nSb:1	nSb:2	b
+nSb:2
+END

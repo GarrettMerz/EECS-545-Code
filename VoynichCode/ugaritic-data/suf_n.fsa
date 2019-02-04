@@ -1,0 +1,167 @@
+START
+START	ym:0	y
+ym:0	ym:1	m
+ym:1
+START	y:0	y
+y:0
+START	h:0	h
+h:0
+START	t:0	t
+t:0
+START	w:0	w
+w:0
+START	wt:0	w
+wt:0	wt:1	t
+wt:1
+START	k:0	k
+k:0
+START	yw:0	y
+yw:0	yw:1	w
+yw:1
+START	yk:0	y
+yk:0	yk:1	k
+yk:1
+START	m:0	m
+m:0
+START	yhm:0	y
+yhm:0	yhm:1	h
+yhm:1	yhm:2	m
+yhm:2
+START	tw:0	t
+tw:0	tw:1	w
+tw:1
+START	ykm:0	y
+ykm:0	ykm:1	k
+ykm:1	ykm:2	m
+ykm:2
+START	ty:0	t
+ty:0	ty:1	y
+ty:1
+START	tm:0	t
+tm:0	tm:1	m
+tm:1
+START	tk:0	t
+tk:0	tk:1	k
+tk:1
+START	yh:0	y
+yh:0	yh:1	h
+yh:1
+START	ynw:0	y
+ynw:0	ynw:1	n
+ynw:1	ynw:2	w
+ynw:2
+START	yt:0	y
+yt:0	yt:1	t
+yt:1
+START	km:0	k
+km:0	km:1	m
+km:1
+START	hw:0	h
+hw:0	hw:1	w
+hw:1
+START	tyw:0	t
+tyw:0	tyw:1	y
+tyw:1	tyw:2	w
+tyw:2
+START	nw:0	n
+nw:0	nw:1	w
+nw:1
+START	wtm:0	w
+wtm:0	wtm:1	t
+wtm:1	wtm:2	m
+wtm:2
+START	th:0	t
+th:0	th:1	h
+th:1
+START	tyk:0	t
+tyk:0	tyk:1	y
+tyk:1	tyk:2	k
+tyk:2
+START	hm:0	h
+hm:0	hm:1	m
+hm:1
+START	yhn:0	y
+yhn:0	yhn:1	h
+yhn:1	yhn:2	n
+yhn:2
+START	wty:0	w
+wty:0	wty:1	t
+wty:1	wty:2	y
+wty:2
+START	wtyw:0	w
+wtyw:0	wtyw:1	t
+wtyw:1	wtyw:2	y
+wtyw:2	wtyw:3	w
+wtyw:3
+START	wtyk:0	w
+wtyk:0	wtyk:1	t
+wtyk:1	wtyk:2	y
+wtyk:2	wtyk:3	k
+wtyk:3
+START	tyh:0	t
+tyh:0	tyh:1	y
+tyh:1	tyh:2	h
+tyh:2
+START	wtyh:0	w
+wtyh:0	wtyh:1	t
+wtyh:1	wtyh:2	y
+wtyh:2	wtyh:3	h
+wtyh:3
+START	wtykm:0	w
+wtykm:0	wtykm:1	t
+wtykm:1	wtykm:2	y
+wtykm:2	wtykm:3	k
+wtykm:3	wtykm:4	m
+wtykm:4
+START	tykm:0	t
+tykm:0	tykm:1	y
+tykm:1	tykm:2	k
+tykm:2	tykm:3	m
+tykm:3
+START	tyhm:0	t
+tyhm:0	tyhm:1	y
+tyhm:1	tyhm:2	h
+tyhm:2	tyhm:3	m
+tyhm:3
+START	wtyhm:0	w
+wtyhm:0	wtyhm:1	t
+wtyhm:1	wtyhm:2	y
+wtyhm:2	wtyhm:3	h
+wtyhm:3	wtyhm:4	m
+wtyhm:4
+START	tkm:0	t
+tkm:0	tkm:1	k
+tkm:1	tkm:2	m
+tkm:2
+START	tnw:0	t
+tnw:0	tnw:1	n
+tnw:1	tnw:2	w
+tnw:2
+START	wth:0	w
+wth:0	wth:1	t
+wth:1	wth:2	h
+wth:2
+START	ytw:0	y
+ytw:0	ytw:1	t
+ytw:1	ytw:2	w
+ytw:2
+START	wtk:0	w
+wtk:0	wtk:1	t
+wtk:1	wtk:2	k
+wtk:2
+START	tynw:0	t
+tynw:0	tynw:1	y
+tynw:1	tynw:2	n
+tynw:2	tynw:3	w
+tynw:3
+START	ytm:0	y
+ytm:0	ytm:1	t
+ytm:1	ytm:2	m
+ytm:2
+START	wtynw:0	w
+wtynw:0	wtynw:1	t
+wtynw:1	wtynw:2	y
+wtynw:2	wtynw:3	n
+wtynw:3	wtynw:4	w
+wtynw:4
+END

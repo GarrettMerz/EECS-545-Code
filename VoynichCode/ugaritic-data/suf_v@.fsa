@@ -1,0 +1,38 @@
+START
+START	h:0	h
+h:0
+START	k:0	k
+k:0
+START	nw:0	n
+nw:0	nw:1	w
+nw:1
+START	ty:0	t
+ty:0	ty:1	y
+ty:1
+START	hm:0	h
+hm:0	hm:1	m
+hm:1
+START	km:0	k
+km:0	km:1	m
+km:1
+START	tym:0	t
+tym:0	tym:1	y
+tym:1	tym:2	m
+tym:2
+START	tm:0	t
+tm:0	tm:1	m
+tm:1
+START	hn:0	h
+hn:0	hn:1	n
+hn:1
+START	kn:0	k
+kn:0	kn:1	n
+kn:1
+START	ny:0	n
+ny:0	ny:1	y
+ny:1
+START	tyh:0	t
+tyh:0	tyh:1	y
+tyh:1	tyh:2	h
+tyh:2
+END

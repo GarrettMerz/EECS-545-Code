@@ -1,0 +1,17 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.dot_prd_fw</title>
+</head>
+<body>
+<code class="code"><span class="keyword">let</span>&nbsp;dot_prd_fw&nbsp;(features&nbsp;:&nbsp;features)&nbsp;(weights&nbsp;:&nbsp;float&nbsp;array)&nbsp;=&nbsp;<br>
+&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;mult&nbsp;feat&nbsp;feat_val&nbsp;sum&nbsp;=&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weights.(feat)&nbsp;*.&nbsp;feat_val&nbsp;+.&nbsp;sum<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">with</span>&nbsp;<span class="constructor">Invalid_argument</span>&nbsp;s&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;sum&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;<span class="constructor">Ht</span>.fold&nbsp;mult&nbsp;features&nbsp;0.</code></body></html>

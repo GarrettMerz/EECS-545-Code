@@ -1,0 +1,2067 @@
+\documentclass[11pt]{article} 
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{fullpage} 
+\usepackage{url} 
+\usepackage{ocamldoc}
+\begin{document}
+\tableofcontents
+\section{Module {\tt{Util}} : Various utility types and functions of my own devising}
+\label{module:Util}\index{Util@\verb`Util`}
+
+
+
+
+\ocamldocvspace{0.5cm}
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Hashtbl}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Hashtbl}\index{Hashtbl@\verb`Hashtbl`}
+
+{\tt{ExtHashtbl.Hashtbl}}
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Array}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Array}\index{Array@\verb`Array`}
+
+{\tt{ExtArray.Array}}
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{String}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.String}\index{String@\verb`String`}
+
+{\tt{ExtString.String}}
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{List}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.List}\index{List@\verb`List`}
+
+{\tt{ExtList.List}}
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Opt}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Opt}\index{Opt@\verb`Opt`}
+
+{\tt{Option}}
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Dray}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Dray}\index{Dray@\verb`Dray`}
+
+{\tt{DynArray}}
+
+
+
+
+
+\label{val:Util.(-plus-equal)}\begin{ocamldoccode}
+val (+=) : int Pervasives.ref -> int -> unit
+\end{ocamldoccode}
+\index{(-plus-equal)@\verb`(+=)`}
+
+
+
+
+\label{val:Util.(-minus-equal)}\begin{ocamldoccode}
+val (-=) : int Pervasives.ref -> int -> unit
+\end{ocamldoccode}
+\index{(-minus-equal)@\verb`(-=)`}
+
+
+
+
+\label{val:Util.(-star-equal)}\begin{ocamldoccode}
+val (*=) : int Pervasives.ref -> int -> unit
+\end{ocamldoccode}
+\index{(-star-equal)@\verb`(*=)`}
+
+
+
+
+\label{val:Util.(-slash-equal)}\begin{ocamldoccode}
+val (/=) : int Pervasives.ref -> int -> unit
+\end{ocamldoccode}
+\index{(-slash-equal)@\verb`(/=)`}
+
+
+
+
+\label{val:Util.(-plus.-equal)}\begin{ocamldoccode}
+val (+.=) : float Pervasives.ref -> float -> unit
+\end{ocamldoccode}
+\index{(-plus.-equal)@\verb`(+.=)`}
+
+
+
+
+\label{val:Util.(-minus.-equal)}\begin{ocamldoccode}
+val (-.=) : float Pervasives.ref -> float -> unit
+\end{ocamldoccode}
+\index{(-minus.-equal)@\verb`(-.=)`}
+
+
+
+
+\label{val:Util.(-star.-equal)}\begin{ocamldoccode}
+val (*.=) : float Pervasives.ref -> float -> unit
+\end{ocamldoccode}
+\index{(-star.-equal)@\verb`(*.=)`}
+
+
+
+
+\label{val:Util.(-slash.-equal)}\begin{ocamldoccode}
+val (/.=) : float Pervasives.ref -> float -> unit
+\end{ocamldoccode}
+\index{(-slash.-equal)@\verb`(/.=)`}
+
+
+
+
+\label{val:Util.(-pipe-gt)}\begin{ocamldoccode}
+val (|>) : 'a -> ('a -> 'b) -> 'b
+\end{ocamldoccode}
+\index{(-pipe-gt)@\verb`("|>)`}
+
+
+
+
+\label{val:Util.(-gt-gt)}\begin{ocamldoccode}
+val (>>) : ('a -> 'b) -> ('c -> 'a) -> 'c -> 'b
+\end{ocamldoccode}
+\index{(-gt-gt)@\verb`(>>)`}
+
+
+
+
+\label{val:Util.(-dollar)}\begin{ocamldoccode}
+val ($) : ('a -> 'b) -> 'a -> 'b
+\end{ocamldoccode}
+\index{(-dollar)@\verb`($)`}
+
+
+
+
+\label{val:Util.swap}\begin{ocamldoccode}
+val swap : ('a -> 'b -> 'c) -> 'b -> 'a -> 'c
+\end{ocamldoccode}
+\index{swap@\verb`swap`}
+
+
+
+
+\label{val:Util.flip}\begin{ocamldoccode}
+val flip : ('a -> 'b -> 'c) -> 'b -> 'a -> 'c
+\end{ocamldoccode}
+\index{flip@\verb`flip`}
+
+
+
+
+\label{type:Util.label}\begin{ocamldoccode}
+type label = int 
+\end{ocamldoccode}
+\index{label@\verb`label`}
+
+
+
+
+\label{type:Util.features}\begin{ocamldoccode}
+type features = (int, float) Hashtbl.t 
+\end{ocamldoccode}
+\index{features@\verb`features`}
+
+
+
+
+\label{type:Util.meta}\begin{ocamldoccode}
+type meta = \{
+  global : string ;
+  local : string ;
+\}
+\end{ocamldoccode}
+\index{meta@\verb`meta`}
+
+
+
+
+\label{type:Util.instance}\begin{ocamldoccode}
+type instance = \{
+  label : int ;
+  features : features ;
+  info : meta ;
+\}
+\end{ocamldoccode}
+\index{instance@\verb`instance`}
+
+
+
+
+\label{type:Util.data}\begin{ocamldoccode}
+type data = instance list 
+\end{ocamldoccode}
+\index{data@\verb`data`}
+
+
+
+
+\label{val:Util.empty-underscoreinstance}\begin{ocamldoccode}
+val empty_instance : instance
+\end{ocamldoccode}
+\index{empty-underscoreinstance@\verb`empty_instance`}
+
+
+
+
+\label{val:Util.list-underscoreof-underscorearray}\begin{ocamldoccode}
+val list_of_array : 'a array -> 'a list
+\end{ocamldoccode}
+\index{list-underscoreof-underscorearray@\verb`list_of_array`}
+
+
+
+
+\label{val:Util.array-underscoreof-underscorelist}\begin{ocamldoccode}
+val array_of_list : 'a list -> 'a array
+\end{ocamldoccode}
+\index{array-underscoreof-underscorelist@\verb`array_of_list`}
+
+
+
+
+\label{val:Util.bool-underscoreof-underscoreint}\begin{ocamldoccode}
+val bool_of_int : int -> bool
+\end{ocamldoccode}
+\index{bool-underscoreof-underscoreint@\verb`bool_of_int`}
+
+
+
+
+\label{val:Util.int-underscoreof-underscorebool}\begin{ocamldoccode}
+val int_of_bool : bool -> int
+\end{ocamldoccode}
+\index{int-underscoreof-underscorebool@\verb`int_of_bool`}
+
+
+
+
+\label{val:Util.boi}\begin{ocamldoccode}
+val boi : int -> bool
+\end{ocamldoccode}
+\index{boi@\verb`boi`}
+
+
+
+
+\label{val:Util.iob}\begin{ocamldoccode}
+val iob : bool -> int
+\end{ocamldoccode}
+\index{iob@\verb`iob`}
+
+
+
+
+\label{val:Util.sob}\begin{ocamldoccode}
+val sob : bool -> string
+\end{ocamldoccode}
+\index{sob@\verb`sob`}
+
+
+
+
+\label{val:Util.bos}\begin{ocamldoccode}
+val bos : string -> bool
+\end{ocamldoccode}
+\index{bos@\verb`bos`}
+
+
+
+
+\label{val:Util.soi}\begin{ocamldoccode}
+val soi : int -> string
+\end{ocamldoccode}
+\index{soi@\verb`soi`}
+
+
+
+
+\label{val:Util.sof}\begin{ocamldoccode}
+val sof : float -> string
+\end{ocamldoccode}
+\index{sof@\verb`sof`}
+
+
+
+
+\label{val:Util.ios}\begin{ocamldoccode}
+val ios : string -> int
+\end{ocamldoccode}
+\index{ios@\verb`ios`}
+
+
+
+
+\label{val:Util.fos}\begin{ocamldoccode}
+val fos : string -> float
+\end{ocamldoccode}
+\index{fos@\verb`fos`}
+
+
+
+
+\label{val:Util.iof}\begin{ocamldoccode}
+val iof : float -> int
+\end{ocamldoccode}
+\index{iof@\verb`iof`}
+
+
+
+
+\label{val:Util.foi}\begin{ocamldoccode}
+val foi : int -> float
+\end{ocamldoccode}
+\index{foi@\verb`foi`}
+
+
+
+
+\label{val:Util.loa}\begin{ocamldoccode}
+val loa : 'a array -> 'a list
+\end{ocamldoccode}
+\index{loa@\verb`loa`}
+
+
+
+
+\label{val:Util.aol}\begin{ocamldoccode}
+val aol : 'a list -> 'a array
+\end{ocamldoccode}
+\index{aol@\verb`aol`}
+
+
+
+
+\label{val:Util.soc}\begin{ocamldoccode}
+val soc : char -> string
+\end{ocamldoccode}
+\index{soc@\verb`soc`}
+
+
+
+
+\label{val:Util.aoe}\begin{ocamldoccode}
+val aoe : 'a Enum.t -> 'a array
+\end{ocamldoccode}
+\index{aoe@\verb`aoe`}
+
+
+
+
+\label{val:Util.eoa}\begin{ocamldoccode}
+val eoa : 'a array -> 'a Enum.t
+\end{ocamldoccode}
+\index{eoa@\verb`eoa`}
+
+
+
+
+\label{val:Util.loe}\begin{ocamldoccode}
+val loe : 'a Enum.t -> 'a list
+\end{ocamldoccode}
+\index{loe@\verb`loe`}
+
+
+
+
+\label{val:Util.eol}\begin{ocamldoccode}
+val eol : 'a list -> 'a Enum.t
+\end{ocamldoccode}
+\index{eol@\verb`eol`}
+
+
+
+
+\label{val:Util.ioc}\begin{ocamldoccode}
+val ioc : char -> int
+\end{ocamldoccode}
+\index{ioc@\verb`ioc`}
+
+
+
+
+\label{val:Util.coi}\begin{ocamldoccode}
+val coi : int -> char
+\end{ocamldoccode}
+\index{coi@\verb`coi`}
+
+
+
+
+\label{val:Util.rev-underscorecompare}\begin{ocamldoccode}
+val rev_compare : 'a -> 'a -> int
+\end{ocamldoccode}
+\index{rev-underscorecompare@\verb`rev_compare`}
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{A}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.A}\index{A@\verb`A`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{Array}}
+
+\label{val:Util.A.iter2}\begin{ocamldoccode}
+val iter2 : ('a -> 'b -> 'c) -> 'a array -> 'b array -> unit
+\end{ocamldoccode}
+\index{iter2@\verb`iter2`}
+
+
+\label{val:Util.A.iter2i}\begin{ocamldoccode}
+val iter2i : (int -> 'a -> 'b -> 'c) -> 'a array -> 'b array -> unit
+\end{ocamldoccode}
+\index{iter2i@\verb`iter2i`}
+
+
+\label{val:Util.A.switer}\begin{ocamldoccode}
+val switer : 'a array -> ('a -> unit) -> unit
+\end{ocamldoccode}
+\index{switer@\verb`switer`}
+
+
+\label{val:Util.A.switeri}\begin{ocamldoccode}
+val switeri : 'a array -> (int -> 'a -> unit) -> unit
+\end{ocamldoccode}
+\index{switeri@\verb`switeri`}
+
+
+\label{val:Util.A.switer2}\begin{ocamldoccode}
+val switer2 : 'a array -> 'b array -> ('a -> 'b -> 'c) -> unit
+\end{ocamldoccode}
+\index{switer2@\verb`switer2`}
+
+
+\label{val:Util.A.switer2i}\begin{ocamldoccode}
+val switer2i : 'a array -> 'b array -> (int -> 'a -> 'b -> 'c) -> unit
+\end{ocamldoccode}
+\index{switer2i@\verb`switer2i`}
+
+
+\label{val:Util.A.map2}\begin{ocamldoccode}
+val map2 : ('a -> 'b -> 'c) -> 'a array -> 'b array -> 'c array
+\end{ocamldoccode}
+\index{map2@\verb`map2`}
+
+
+\label{val:Util.A.map-underscorematrix}\begin{ocamldoccode}
+val map_matrix : ('a -> 'b) -> 'a array array -> 'b array array
+\end{ocamldoccode}
+\index{map-underscorematrix@\verb`map_matrix`}
+
+
+\label{val:Util.A.map-underscore2D}\begin{ocamldoccode}
+val map_2D : ('a -> 'b) -> 'a array array -> 'b array array
+\end{ocamldoccode}
+\index{map-underscore2D@\verb`map_2D`}
+
+
+\label{val:Util.A.mapij-underscore2D}\begin{ocamldoccode}
+val mapij_2D : (int -> int -> 'a -> 'b) -> 'a array array -> 'b array array
+\end{ocamldoccode}
+\index{mapij-underscore2D@\verb`mapij_2D`}
+
+
+\label{val:Util.A.iter-underscore2D}\begin{ocamldoccode}
+val iter_2D : ('a -> 'b) -> 'a array array -> unit
+\end{ocamldoccode}
+\index{iter-underscore2D@\verb`iter_2D`}
+
+
+\label{val:Util.A.iterij-underscore2D}\begin{ocamldoccode}
+val iterij_2D : (int -> int -> 'a -> 'b) -> 'a array array -> unit
+\end{ocamldoccode}
+\index{iterij-underscore2D@\verb`iterij_2D`}
+
+
+\label{val:Util.A.iter-underscore3D}\begin{ocamldoccode}
+val iter_3D : ('a -> 'b) -> 'a array array array -> unit
+\end{ocamldoccode}
+\index{iter-underscore3D@\verb`iter_3D`}
+
+
+\label{val:Util.A.iterijk-underscore3D}\begin{ocamldoccode}
+val iterijk_3D :
+  (int -> int -> int -> 'a -> 'b) -> 'a array array array -> unit
+\end{ocamldoccode}
+\index{iterijk-underscore3D@\verb`iterijk_3D`}
+
+
+\label{val:Util.A.smap}\begin{ocamldoccode}
+val smap : 'a array -> ('a -> 'b) -> 'b array
+\end{ocamldoccode}
+\index{smap@\verb`smap`}
+
+
+\label{val:Util.A.smapi}\begin{ocamldoccode}
+val smapi : 'a array -> ('a -> 'b) -> 'b array
+\end{ocamldoccode}
+\index{smapi@\verb`smapi`}
+
+
+\label{val:Util.A.smap2}\begin{ocamldoccode}
+val smap2 : 'a array -> 'b array -> ('a -> 'b -> 'c) -> 'c array
+\end{ocamldoccode}
+\index{smap2@\verb`smap2`}
+
+
+\label{val:Util.A.shuffled-underscorein}\begin{ocamldoccode}
+val shuffled_in : ?seed:int option -> 'a array -> 'a array
+\end{ocamldoccode}
+\index{shuffled-underscorein@\verb`shuffled_in`}
+\begin{ocamldocdescription}
+in-place shuffle
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.shuffled}\begin{ocamldoccode}
+val shuffled : ?seed:'a option -> 'b array -> 'b array
+\end{ocamldoccode}
+\index{shuffled@\verb`shuffled`}
+\begin{ocamldocdescription}
+non-destructive shuffle
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.shuffle}\begin{ocamldoccode}
+val shuffle : 'a array -> unit
+\end{ocamldoccode}
+\index{shuffle@\verb`shuffle`}
+\begin{ocamldocdescription}
+imperative (destructive) shuffle
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.put}\begin{ocamldoccode}
+val put : (int -> 'a) -> 'a array -> unit
+\end{ocamldoccode}
+\index{put@\verb`put`}
+\begin{ocamldocdescription}
+{\tt{put f a}} replaces the {\tt{i}}th element of array {\tt{a}} with {\tt{f i}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.update}\begin{ocamldoccode}
+val update : ('a -> 'a) -> 'a array -> unit
+\end{ocamldoccode}
+\index{update@\verb`update`}
+\begin{ocamldocdescription}
+{\tt{update f a}} replaces each element {\tt{e}} in array {\tt{a}} with {\tt{f e}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.unique}\begin{ocamldoccode}
+val unique : 'a array -> 'a array
+\end{ocamldoccode}
+\index{unique@\verb`unique`}
+\begin{ocamldocdescription}
+{\tt{unique a}} returns a new array {\tt{a'}} with all the unique elements of {\tt{a}} appearing
+    exactly once, in the intial order of appearance in {\tt{a}}.
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.to-underscoreht}\begin{ocamldoccode}
+val to_ht : 'a array -> ('a, int) Util.Hashtbl.t
+\end{ocamldoccode}
+\index{to-underscoreht@\verb`to_ht`}
+\begin{ocamldocdescription}
+{\tt{to\_ht a}} returns a hashtable {\tt{h}} where {\tt{Ht.find h elt = i}}, for some {\tt{i}} s.t. {\tt{a.(i) = elt}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.except}\begin{ocamldoccode}
+val except : int -> 'a array -> 'a array
+\end{ocamldoccode}
+\index{except@\verb`except`}
+\begin{ocamldocdescription}
+{\tt{except i a}} returns a copy of array {\tt{a}} excluding element index {\tt{i}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.find-underscoreitem}\begin{ocamldoccode}
+val find_item : 'a -> 'a array -> int
+\end{ocamldoccode}
+\index{find-underscoreitem@\verb`find_item`}
+
+
+\label{val:Util.A.find-underscorealli}\begin{ocamldoccode}
+val find_alli : ('a -> bool) -> 'a array -> int array
+\end{ocamldoccode}
+\index{find-underscorealli@\verb`find_alli`}
+\begin{ocamldocdescription}
+{\tt{find\_alli p a}} returns the index array of elements from 
+   array {\tt{a}} that satisfy predicate {\tt{p}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.existsi}\begin{ocamldoccode}
+val existsi : (int -> 'a -> bool) -> 'a array -> bool
+\end{ocamldoccode}
+\index{existsi@\verb`existsi`}
+
+
+\label{val:Util.A.slice}\begin{ocamldoccode}
+val slice : ?first:int -> ?last:int -> 'a array -> 'a array
+\end{ocamldoccode}
+\index{slice@\verb`slice`}
+
+
+\label{val:Util.A.split}\begin{ocamldoccode}
+val split : 'a array -> int -> 'a array * 'a array
+\end{ocamldoccode}
+\index{split@\verb`split`}
+
+
+\label{val:Util.A.range}\begin{ocamldoccode}
+val range : int -> int -> int array
+\end{ocamldoccode}
+\index{range@\verb`range`}
+\begin{ocamldocdescription}
+{\tt{range fst lst}} returns an array of ints from {\tt{fst}} inclusive to {\tt{lst}} exclusive
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.A.findi-underscorenext}\begin{ocamldoccode}
+val findi_next : int -> ('a -> bool) -> 'a array -> int
+\end{ocamldoccode}
+\index{findi-underscorenext@\verb`findi_next`}
+
+
+\label{val:Util.A.find-underscorenext}\begin{ocamldoccode}
+val find_next : int -> ('a -> bool) -> 'a array -> 'a
+\end{ocamldoccode}
+\index{find-underscorenext@\verb`find_next`}
+
+
+\label{val:Util.A.rand-underscoreiter}\begin{ocamldoccode}
+val rand_iter : ?seed:int option -> ('a -> 'b) -> 'a array -> unit
+\end{ocamldoccode}
+\index{rand-underscoreiter@\verb`rand_iter`}
+
+
+\label{val:Util.A.rand-underscoreiteri}\begin{ocamldoccode}
+val rand_iteri : ?seed:int option -> (int -> 'a -> 'b) -> 'a array -> unit
+\end{ocamldoccode}
+\index{rand-underscoreiteri@\verb`rand_iteri`}
+
+
+\label{val:Util.A.of-underscorestr}\begin{ocamldoccode}
+val of_str :
+  btw:string -> l:string -> r:string -> (string -> 'a) -> string -> 'a array
+\end{ocamldoccode}
+\index{of-underscorestr@\verb`of_str`}
+
+
+\label{val:Util.A.of-underscorestr1}\begin{ocamldoccode}
+val of_str1 : (string -> 'a) -> string -> 'a array
+\end{ocamldoccode}
+\index{of-underscorestr1@\verb`of_str1`}
+
+
+\label{val:Util.A.of-underscorestr2}\begin{ocamldoccode}
+val of_str2 : (string -> 'a) -> string -> 'a array
+\end{ocamldoccode}
+\index{of-underscorestr2@\verb`of_str2`}
+
+
+\label{val:Util.A.to-underscorestr}\begin{ocamldoccode}
+val to_str :
+  btw:string -> l:string -> r:string -> ('a -> string) -> 'a array -> string
+\end{ocamldoccode}
+\index{to-underscorestr@\verb`to_str`}
+
+
+\label{val:Util.A.to-underscorestr1}\begin{ocamldoccode}
+val to_str1 : ('a -> string) -> 'a array -> string
+\end{ocamldoccode}
+\index{to-underscorestr1@\verb`to_str1`}
+
+
+\label{val:Util.A.to-underscorestr2}\begin{ocamldoccode}
+val to_str2 : ('a -> string) -> 'a array -> string
+\end{ocamldoccode}
+\index{to-underscorestr2@\verb`to_str2`}
+
+
+\label{val:Util.A.all-underscoresame}\begin{ocamldoccode}
+val all_same : 'a array -> bool
+\end{ocamldoccode}
+\index{all-underscoresame@\verb`all_same`}
+
+
+\label{val:Util.A.normalize}\begin{ocamldoccode}
+val normalize : float array -> unit
+\end{ocamldoccode}
+\index{normalize@\verb`normalize`}
+
+
+\label{val:Util.A.count}\begin{ocamldoccode}
+val count : 'a array -> 'a -> int
+\end{ocamldoccode}
+\index{count@\verb`count`}
+
+
+\label{val:Util.A.incr}\begin{ocamldoccode}
+val incr : int array -> int -> unit
+\end{ocamldoccode}
+\index{incr@\verb`incr`}
+
+
+\label{val:Util.A.decr}\begin{ocamldoccode}
+val decr : int array -> int -> unit
+\end{ocamldoccode}
+\index{decr@\verb`decr`}
+
+
+\label{val:Util.A.incr'}\begin{ocamldoccode}
+val incr' : float array -> int -> unit
+\end{ocamldoccode}
+\index{incr'@\verb`incr'`}
+
+
+\label{val:Util.A.decr'}\begin{ocamldoccode}
+val decr' : float array -> int -> unit
+\end{ocamldoccode}
+\index{decr'@\verb`decr'`}
+
+
+\label{val:Util.A.fill-underscoreall}\begin{ocamldoccode}
+val fill_all : 'a array -> 'a -> unit
+\end{ocamldoccode}
+\index{fill-underscoreall@\verb`fill_all`}
+
+
+\label{val:Util.A.init-underscorematrix}\begin{ocamldoccode}
+val init_matrix : int -> int -> (int -> int -> 'a) -> 'a array array
+\end{ocamldoccode}
+\index{init-underscorematrix@\verb`init_matrix`}
+
+
+\label{val:Util.A.init-underscore2D}\begin{ocamldoccode}
+val init_2D : int -> int -> (int -> int -> 'a) -> 'a array array
+\end{ocamldoccode}
+\index{init-underscore2D@\verb`init_2D`}
+
+
+\label{val:Util.A.init-underscoresymm-underscorematrix}\begin{ocamldoccode}
+val init_symm_matrix : int -> (int -> int -> 'a) -> 'a array array
+\end{ocamldoccode}
+\index{init-underscoresymm-underscorematrix@\verb`init_symm_matrix`}
+
+
+\label{val:Util.A.make-underscore2D}\begin{ocamldoccode}
+val make_2D : int -> int -> 'a -> 'a array array
+\end{ocamldoccode}
+\index{make-underscore2D@\verb`make_2D`}
+
+
+\label{val:Util.A.make-underscore3D}\begin{ocamldoccode}
+val make_3D : int -> int -> int -> 'a -> 'a array array array
+\end{ocamldoccode}
+\index{make-underscore3D@\verb`make_3D`}
+
+
+\label{val:Util.A.init-underscore3D}\begin{ocamldoccode}
+val init_3D :
+  int -> int -> int -> (int -> int -> int -> 'a) -> 'a array array array
+\end{ocamldoccode}
+\index{init-underscore3D@\verb`init_3D`}
+
+
+\label{val:Util.A.fill-underscoreall-underscorematrix}\begin{ocamldoccode}
+val fill_all_matrix : 'a array array -> 'a -> unit
+\end{ocamldoccode}
+\index{fill-underscoreall-underscorematrix@\verb`fill_all_matrix`}
+
+
+\label{val:Util.A.fill-underscoreall-underscore2D}\begin{ocamldoccode}
+val fill_all_2D : 'a array array -> 'a -> unit
+\end{ocamldoccode}
+\index{fill-underscoreall-underscore2D@\verb`fill_all_2D`}
+
+
+\label{val:Util.A.fill-underscore3D}\begin{ocamldoccode}
+val fill_3D : 'a array array array -> 'a -> unit
+\end{ocamldoccode}
+\index{fill-underscore3D@\verb`fill_3D`}
+
+
+\label{val:Util.A.copy-underscorematrix}\begin{ocamldoccode}
+val copy_matrix : 'a array array -> 'a array array
+\end{ocamldoccode}
+\index{copy-underscorematrix@\verb`copy_matrix`}
+
+
+\label{val:Util.A.copy-underscore2D}\begin{ocamldoccode}
+val copy_2D : 'a array array -> 'a array array
+\end{ocamldoccode}
+\index{copy-underscore2D@\verb`copy_2D`}
+
+
+\label{val:Util.A.sum}\begin{ocamldoccode}
+val sum : float array -> float
+\end{ocamldoccode}
+\index{sum@\verb`sum`}
+
+
+\label{val:Util.A.sum-underscoreint}\begin{ocamldoccode}
+val sum_int : int array -> int
+\end{ocamldoccode}
+\index{sum-underscoreint@\verb`sum_int`}
+
+
+\label{val:Util.A.filteri}\begin{ocamldoccode}
+val filteri : (int -> 'a -> bool) -> 'a array -> 'a array
+\end{ocamldoccode}
+\index{filteri@\verb`filteri`}
+
+
+\label{val:Util.A.flatten}\begin{ocamldoccode}
+val flatten : 'a array array -> 'a array
+\end{ocamldoccode}
+\index{flatten@\verb`flatten`}
+
+
+\label{val:Util.A.concat}\begin{ocamldoccode}
+val concat : 'a array array -> 'a array
+\end{ocamldoccode}
+\index{concat@\verb`concat`}
+
+
+\label{val:Util.A.map-underscorefilter}\begin{ocamldoccode}
+val map_filter : ('a -> 'b option) -> 'a array -> 'b array
+\end{ocamldoccode}
+\index{map-underscorefilter@\verb`map_filter`}
+
+
+\label{val:Util.A.map-underscorefilteri}\begin{ocamldoccode}
+val map_filteri : (int -> 'a -> 'b option) -> 'a array -> 'b array
+\end{ocamldoccode}
+\index{map-underscorefilteri@\verb`map_filteri`}
+
+
+\label{val:Util.A.iter-underscoreall}\begin{ocamldoccode}
+val iter_all : ('a -> unit) -> 'a array array -> unit
+\end{ocamldoccode}
+\index{iter-underscoreall@\verb`iter_all`}
+
+
+\label{val:Util.A.iteri-underscoreall}\begin{ocamldoccode}
+val iteri_all : (int -> 'a -> unit) -> 'a array array -> unit
+\end{ocamldoccode}
+\index{iteri-underscoreall@\verb`iteri_all`}
+
+
+\label{val:Util.A.filter-underscoreall}\begin{ocamldoccode}
+val filter_all : ('a -> bool) -> 'a array array -> 'a array
+\end{ocamldoccode}
+\index{filter-underscoreall@\verb`filter_all`}
+
+
+\label{val:Util.A.filteri-underscoreall}\begin{ocamldoccode}
+val filteri_all : (int -> 'a -> bool) -> 'a array array -> 'a array
+\end{ocamldoccode}
+\index{filteri-underscoreall@\verb`filteri_all`}
+
+
+\label{val:Util.A.map-underscoreall}\begin{ocamldoccode}
+val map_all : ('a -> 'b) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{map-underscoreall@\verb`map_all`}
+
+
+\label{val:Util.A.mapi-underscoreall}\begin{ocamldoccode}
+val mapi_all : (int -> 'a -> 'b) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{mapi-underscoreall@\verb`mapi_all`}
+
+
+\label{val:Util.A.map-underscorefilter-underscoreall}\begin{ocamldoccode}
+val map_filter_all : ('a -> 'b option) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{map-underscorefilter-underscoreall@\verb`map_filter_all`}
+
+
+\label{val:Util.A.map-underscorefilteri-underscoreall}\begin{ocamldoccode}
+val map_filteri_all : (int -> 'a -> 'b option) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{map-underscorefilteri-underscoreall@\verb`map_filteri_all`}
+
+
+\label{val:Util.A.filter-underscoreall-underscoreij}\begin{ocamldoccode}
+val filter_all_ij : (int -> int -> 'a -> bool) -> 'a array array -> 'a array
+\end{ocamldoccode}
+\index{filter-underscoreall-underscoreij@\verb`filter_all_ij`}
+
+
+\label{val:Util.A.map-underscoreall-underscoreij}\begin{ocamldoccode}
+val map_all_ij : (int -> int -> 'a -> 'b) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{map-underscoreall-underscoreij@\verb`map_all_ij`}
+
+
+\label{val:Util.A.iter-underscoreall-underscoreij}\begin{ocamldoccode}
+val iter_all_ij : (int -> int -> 'a -> 'b) -> 'a array array -> unit
+\end{ocamldoccode}
+\index{iter-underscoreall-underscoreij@\verb`iter_all_ij`}
+
+
+\label{val:Util.A.map-underscorefilter-underscoreall-underscoreij}\begin{ocamldoccode}
+val map_filter_all_ij :
+  (int -> int -> 'a -> 'b option) -> 'a array array -> 'b array
+\end{ocamldoccode}
+\index{map-underscorefilter-underscoreall-underscoreij@\verb`map_filter_all_ij`}
+
+
+\label{val:Util.A.get-underscorecombos}\begin{ocamldoccode}
+val get_combos : 'a array array -> 'a array array
+\end{ocamldoccode}
+\index{get-underscorecombos@\verb`get_combos`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{L}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.L}\index{L@\verb`L`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{List}}
+
+\label{val:Util.L.iter2i}\begin{ocamldoccode}
+val iter2i : (int -> 'a -> 'b -> 'c) -> 'a list -> 'b list -> unit
+\end{ocamldoccode}
+\index{iter2i@\verb`iter2i`}
+
+
+\label{val:Util.L.switer}\begin{ocamldoccode}
+val switer : 'a list -> ('a -> unit) -> unit
+\end{ocamldoccode}
+\index{switer@\verb`switer`}
+
+
+\label{val:Util.L.switeri}\begin{ocamldoccode}
+val switeri : 'a list -> (int -> 'a -> 'b) -> unit
+\end{ocamldoccode}
+\index{switeri@\verb`switeri`}
+
+
+\label{val:Util.L.switer2}\begin{ocamldoccode}
+val switer2 : 'a list -> 'b list -> ('a -> 'b -> unit) -> unit
+\end{ocamldoccode}
+\index{switer2@\verb`switer2`}
+
+
+\label{val:Util.L.switer2i}\begin{ocamldoccode}
+val switer2i : 'a list -> 'b list -> (int -> 'a -> 'b -> 'c) -> unit
+\end{ocamldoccode}
+\index{switer2i@\verb`switer2i`}
+
+
+\label{val:Util.L.smap}\begin{ocamldoccode}
+val smap : 'a list -> ('a -> 'b) -> 'b list
+\end{ocamldoccode}
+\index{smap@\verb`smap`}
+
+
+\label{val:Util.L.smapi}\begin{ocamldoccode}
+val smapi : 'a list -> ('a -> 'b) -> 'b list
+\end{ocamldoccode}
+\index{smapi@\verb`smapi`}
+
+
+\label{val:Util.L.smap2}\begin{ocamldoccode}
+val smap2 : 'a list -> 'b list -> ('a -> 'b -> 'c) -> 'c list
+\end{ocamldoccode}
+\index{smap2@\verb`smap2`}
+
+
+\label{val:Util.L.all-underscoresame}\begin{ocamldoccode}
+val all_same : 'a list -> bool
+\end{ocamldoccode}
+\index{all-underscoresame@\verb`all_same`}
+
+
+\label{val:Util.L.is-underscoreempty}\begin{ocamldoccode}
+val is_empty : 'a list -> bool
+\end{ocamldoccode}
+\index{is-underscoreempty@\verb`is_empty`}
+
+
+\label{val:Util.L.of-underscorestr}\begin{ocamldoccode}
+val of_str :
+  btw:string -> l:string -> r:string -> (string -> 'a) -> string -> 'a list
+\end{ocamldoccode}
+\index{of-underscorestr@\verb`of_str`}
+
+
+\label{val:Util.L.of-underscorestr1}\begin{ocamldoccode}
+val of_str1 : (string -> 'a) -> string -> 'a list
+\end{ocamldoccode}
+\index{of-underscorestr1@\verb`of_str1`}
+
+
+\label{val:Util.L.of-underscorestr2}\begin{ocamldoccode}
+val of_str2 : (string -> 'a) -> string -> 'a list
+\end{ocamldoccode}
+\index{of-underscorestr2@\verb`of_str2`}
+
+
+\label{val:Util.L.to-underscorestr}\begin{ocamldoccode}
+val to_str :
+  btw:string -> l:string -> r:string -> ('a -> string) -> 'a list -> string
+\end{ocamldoccode}
+\index{to-underscorestr@\verb`to_str`}
+
+
+\label{val:Util.L.to-underscorestr1}\begin{ocamldoccode}
+val to_str1 : ('a -> string) -> 'a list -> string
+\end{ocamldoccode}
+\index{to-underscorestr1@\verb`to_str1`}
+
+
+\label{val:Util.L.to-underscorestr2}\begin{ocamldoccode}
+val to_str2 : ('a -> string) -> 'a list -> string
+\end{ocamldoccode}
+\index{to-underscorestr2@\verb`to_str2`}
+
+
+\label{val:Util.L.count}\begin{ocamldoccode}
+val count : 'a list -> 'a -> int
+\end{ocamldoccode}
+\index{count@\verb`count`}
+
+
+\label{val:Util.L.unique}\begin{ocamldoccode}
+val unique : 'a list -> 'a list
+\end{ocamldoccode}
+\index{unique@\verb`unique`}
+
+
+\label{val:Util.L.range}\begin{ocamldoccode}
+val range : int -> int -> int list
+\end{ocamldoccode}
+\index{range@\verb`range`}
+
+
+\label{val:Util.L.transpose1}\begin{ocamldoccode}
+val transpose1 : 'a list list -> 'a list list
+\end{ocamldoccode}
+\index{transpose1@\verb`transpose1`}
+\begin{ocamldocdescription}
+transposes a list of lists as if it were a matrix
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.L.transpose2}\begin{ocamldoccode}
+val transpose2 : 'a list list -> 'a list list
+\end{ocamldoccode}
+\index{transpose2@\verb`transpose2`}
+
+
+\label{val:Util.L.transpose}\begin{ocamldoccode}
+val transpose : 'a list list -> 'a list list
+\end{ocamldoccode}
+\index{transpose@\verb`transpose`}
+
+
+\label{val:Util.L.map-underscorefilter}\begin{ocamldoccode}
+val map_filter : ('a -> 'b option) -> 'a list -> 'b list
+\end{ocamldoccode}
+\index{map-underscorefilter@\verb`map_filter`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Ht}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Ht}\index{Ht@\verb`Ht`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{Hashtbl}}
+
+\label{val:Util.Ht.add-underscoreint}\begin{ocamldoccode}
+val add_int : ('a, int) t -> 'a -> int -> unit
+\end{ocamldoccode}
+\index{add-underscoreint@\verb`add_int`}
+
+
+\label{val:Util.Ht.add-underscorefloat}\begin{ocamldoccode}
+val add_float : ('a, float) t -> 'a -> float -> unit
+\end{ocamldoccode}
+\index{add-underscorefloat@\verb`add_float`}
+
+
+\label{val:Util.Ht.incr}\begin{ocamldoccode}
+val incr : ('a, int) t -> 'a -> unit
+\end{ocamldoccode}
+\index{incr@\verb`incr`}
+
+
+\label{val:Util.Ht.decr}\begin{ocamldoccode}
+val decr : ('a, int) t -> 'a -> unit
+\end{ocamldoccode}
+\index{decr@\verb`decr`}
+
+
+\label{val:Util.Ht.incr'}\begin{ocamldoccode}
+val incr' : ('a, float) t -> 'a -> unit
+\end{ocamldoccode}
+\index{incr'@\verb`incr'`}
+
+
+\label{val:Util.Ht.decr'}\begin{ocamldoccode}
+val decr' : ('a, float) t -> 'a -> unit
+\end{ocamldoccode}
+\index{decr'@\verb`decr'`}
+
+
+\label{val:Util.Ht.get}\begin{ocamldoccode}
+val get : ('a, 'b) t -> 'a -> 'b -> 'b
+\end{ocamldoccode}
+\index{get@\verb`get`}
+
+
+\label{val:Util.Ht.to-underscorestr}\begin{ocamldoccode}
+val to_str :
+  ('a -> string) ->
+  ('b -> string) -> string -> string -> 'c -> string -> ('a, 'b) t -> string
+\end{ocamldoccode}
+\index{to-underscorestr@\verb`to_str`}
+
+
+\label{val:Util.Ht.to-underscorestr1}\begin{ocamldoccode}
+val to_str1 : ('a -> string) -> ('b -> string) -> ('a, 'b) t -> string
+\end{ocamldoccode}
+\index{to-underscorestr1@\verb`to_str1`}
+
+
+\label{val:Util.Ht.of-underscorefile}\begin{ocamldoccode}
+val of_file : (string -> 'a) -> (string -> 'b) -> string -> ('a, 'b) t
+\end{ocamldoccode}
+\index{of-underscorefile@\verb`of_file`}
+\begin{ocamldocdescription}
+{\tt{of\_file key\_fun val\_fun fn}} returns a hashtable from a file {\tt{fn}}.  Each line of 
+{\tt{fn}} should contain a key,value pair separated by tab
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.Ht.of-underscorearrays}\begin{ocamldoccode}
+val of_arrays : 'a array -> 'b array -> ('a, 'b) t
+\end{ocamldoccode}
+\index{of-underscorearrays@\verb`of_arrays`}
+\begin{ocamldocdescription}
+{\tt{of\_arrays k v}} returns a hashtable where {\tt{k.(i)}} $\rightarrow$ {\tt{v.(i)}} for each {\tt{i}}.
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.Ht.of-underscorearray}\begin{ocamldoccode}
+val of_array : 'a array -> ('a, int) Util.Hashtbl.t
+\end{ocamldoccode}
+\index{of-underscorearray@\verb`of_array`}
+\begin{ocamldocdescription}
+{\tt{of\_array a}} returns a hashtable {\tt{h}} where {\tt{Ht.find h elt = i}}, for some {\tt{i}} s.t. {\tt{a.(i) = elt}}
+
+
+\end{ocamldocdescription}
+
+
+\label{val:Util.Ht.to-underscorearray}\begin{ocamldoccode}
+val to_array : ('a, 'b) t -> ('a * 'b) array
+\end{ocamldoccode}
+\index{to-underscorearray@\verb`to_array`}
+
+
+\label{val:Util.Ht.to-underscoresorted-underscorearray}\begin{ocamldoccode}
+val to_sorted_array : ('a, 'b) t -> ('a * 'b) array
+\end{ocamldoccode}
+\index{to-underscoresorted-underscorearray@\verb`to_sorted_array`}
+
+
+\label{val:Util.Ht.to-underscorerev-underscoresorted-underscorearray}\begin{ocamldoccode}
+val to_rev_sorted_array : ('a, 'b) t -> ('a * 'b) array
+\end{ocamldoccode}
+\index{to-underscorerev-underscoresorted-underscorearray@\verb`to_rev_sorted_array`}
+
+
+\label{val:Util.Ht.init}\begin{ocamldoccode}
+val init : 'a array -> ('a -> 'b) -> ('a, 'b) t
+\end{ocamldoccode}
+\index{init@\verb`init`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{S}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.S}\index{S@\verb`S`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{String}}
+
+\label{val:Util.S.count}\begin{ocamldoccode}
+val count : string -> char -> int
+\end{ocamldoccode}
+\index{count@\verb`count`}
+
+
+\label{val:Util.S.lstrip}\begin{ocamldoccode}
+val lstrip : ?chars:string -> string -> string
+\end{ocamldoccode}
+\index{lstrip@\verb`lstrip`}
+
+
+\label{val:Util.S.rstrip}\begin{ocamldoccode}
+val rstrip : ?chars:string -> string -> string
+\end{ocamldoccode}
+\index{rstrip@\verb`rstrip`}
+
+
+\label{val:Util.S.remove}\begin{ocamldoccode}
+val remove : char -> string -> string
+\end{ocamldoccode}
+\index{remove@\verb`remove`}
+
+
+\label{val:Util.S.replace-underscoreall}\begin{ocamldoccode}
+val replace_all : str:string -> sub:string -> by:string -> string
+\end{ocamldoccode}
+\index{replace-underscoreall@\verb`replace_all`}
+
+
+\label{val:Util.S.nsplita}\begin{ocamldoccode}
+val nsplita : string -> string -> string array
+\end{ocamldoccode}
+\index{nsplita@\verb`nsplita`}
+
+
+\label{val:Util.S.concata}\begin{ocamldoccode}
+val concata : string -> string array -> string
+\end{ocamldoccode}
+\index{concata@\verb`concata`}
+
+
+\label{val:Util.S.joina}\begin{ocamldoccode}
+val joina : string -> string array -> string
+\end{ocamldoccode}
+\index{joina@\verb`joina`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{E}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.E}\index{E@\verb`E`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{Enum}}
+
+\label{val:Util.E.switer}\begin{ocamldoccode}
+val switer : 'a t -> ('a -> unit) -> unit
+\end{ocamldoccode}
+\index{switer@\verb`switer`}
+
+
+\label{val:Util.E.switeri}\begin{ocamldoccode}
+val switeri : 'a t -> (int -> 'a -> unit) -> unit
+\end{ocamldoccode}
+\index{switeri@\verb`switeri`}
+
+
+\label{val:Util.E.switer2}\begin{ocamldoccode}
+val switer2 : 'a t -> 'b t -> ('a -> 'b -> unit) -> unit
+\end{ocamldoccode}
+\index{switer2@\verb`switer2`}
+
+
+\label{val:Util.E.switer2i}\begin{ocamldoccode}
+val switer2i : 'a t -> 'b t -> (int -> 'a -> 'b -> unit) -> unit
+\end{ocamldoccode}
+\index{switer2i@\verb`switer2i`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Pair}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Pair}\index{Pair@\verb`Pair`}
+
+\begin{ocamldocsigend}
+
+
+\label{val:Util.Pair.map}\begin{ocamldoccode}
+val map : ('a -> 'b) -> 'a * 'a -> 'b * 'b
+\end{ocamldoccode}
+\index{map@\verb`map`}
+
+
+\label{val:Util.Pair.swap}\begin{ocamldoccode}
+val swap : 'a * 'b -> 'b * 'a
+\end{ocamldoccode}
+\index{swap@\verb`swap`}
+
+
+\label{val:Util.Pair.iter}\begin{ocamldoccode}
+val iter : ('a -> 'b) -> 'a * 'a -> 'b
+\end{ocamldoccode}
+\index{iter@\verb`iter`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{G}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.G}\index{G@\verb`G`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{Global}}
+
+\label{val:Util.G.notdef}\begin{ocamldoccode}
+val notdef : 'a t -> bool
+\end{ocamldoccode}
+\index{notdef@\verb`notdef`}
+
+
+\label{val:Util.G.create}\begin{ocamldoccode}
+val create : ?s:string -> 'a -> 'a t
+\end{ocamldoccode}
+\index{create@\verb`create`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\begin{ocamldoccode}
+{\tt{module }}{\tt{Hs}}{\tt{ : }}\end{ocamldoccode}
+\label{module:Util.Hs}\index{Hs@\verb`Hs`}
+
+\begin{ocamldocsigend}
+
+
+{\tt{include }}{\tt{HashSet}}
+
+\label{val:Util.Hs.of-underscorelist}\begin{ocamldoccode}
+val of_list : 'a list -> 'a t
+\end{ocamldoccode}
+\index{of-underscorelist@\verb`of_list`}
+
+
+\label{val:Util.Hs.of-underscorearray}\begin{ocamldoccode}
+val of_array : 'a array -> 'a t
+\end{ocamldoccode}
+\index{of-underscorearray@\verb`of_array`}
+
+
+\label{val:Util.Hs.to-underscorearray}\begin{ocamldoccode}
+val to_array : 'a t -> 'a array
+\end{ocamldoccode}
+\index{to-underscorearray@\verb`to_array`}
+
+
+\label{val:Util.Hs.to-underscorelist}\begin{ocamldoccode}
+val to_list : 'a t -> 'a list
+\end{ocamldoccode}
+\index{to-underscorelist@\verb`to_list`}
+\end{ocamldocsigend}
+
+
+
+
+
+
+\label{val:Util.pause}\begin{ocamldoccode}
+val pause : unit -> unit
+\end{ocamldoccode}
+\index{pause@\verb`pause`}
+
+
+
+
+\label{val:Util.my-underscoredump}\begin{ocamldoccode}
+val my_dump : 'a -> string
+\end{ocamldoccode}
+\index{my-underscoredump@\verb`my_dump`}
+
+
+
+
+\label{val:Util.time}\begin{ocamldoccode}
+val time : (unit -> 'a) -> float
+\end{ocamldoccode}
+\index{time@\verb`time`}
+
+
+
+
+\label{val:Util.list-underscoreof-underscorefile}\begin{ocamldoccode}
+val list_of_file : string -> string list
+\end{ocamldoccode}
+\index{list-underscoreof-underscorefile@\verb`list_of_file`}
+
+
+
+
+\label{val:Util.array-underscoreof-underscoreinput}\begin{ocamldoccode}
+val array_of_input : Pervasives.in_channel -> string array
+\end{ocamldoccode}
+\index{array-underscoreof-underscoreinput@\verb`array_of_input`}
+
+
+
+
+\label{val:Util.array-underscoreof-underscorefile}\begin{ocamldoccode}
+val array_of_file : string -> string array
+\end{ocamldoccode}
+\index{array-underscoreof-underscorefile@\verb`array_of_file`}
+
+
+
+
+\label{val:Util.enum-underscoreof-underscorefile}\begin{ocamldoccode}
+val enum_of_file : string -> string Enum.t
+\end{ocamldoccode}
+\index{enum-underscoreof-underscorefile@\verb`enum_of_file`}
+
+
+
+
+\label{val:Util.output-underscoreenum}\begin{ocamldoccode}
+val output_enum : Pervasives.out_channel -> string E.t -> unit
+\end{ocamldoccode}
+\index{output-underscoreenum@\verb`output_enum`}
+
+
+
+
+\label{val:Util.file-underscoreof-underscoreenum}\begin{ocamldoccode}
+val file_of_enum : string -> string E.t -> unit
+\end{ocamldoccode}
+\index{file-underscoreof-underscoreenum@\verb`file_of_enum`}
+
+
+
+
+\label{val:Util.output-underscorelist}\begin{ocamldoccode}
+val output_list : Pervasives.out_channel -> string list -> unit
+\end{ocamldoccode}
+\index{output-underscorelist@\verb`output_list`}
+
+
+
+
+\label{val:Util.file-underscoreof-underscorelist}\begin{ocamldoccode}
+val file_of_list : string -> string list -> unit
+\end{ocamldoccode}
+\index{file-underscoreof-underscorelist@\verb`file_of_list`}
+
+
+
+
+\label{val:Util.output-underscorearray}\begin{ocamldoccode}
+val output_array : Pervasives.out_channel -> string array -> unit
+\end{ocamldoccode}
+\index{output-underscorearray@\verb`output_array`}
+
+
+
+
+\label{val:Util.file-underscoreof-underscorearray}\begin{ocamldoccode}
+val file_of_array : string -> string array -> unit
+\end{ocamldoccode}
+\index{file-underscoreof-underscorearray@\verb`file_of_array`}
+
+
+
+
+\label{val:Util.dot-underscoreprd-underscoreff}\begin{ocamldoccode}
+val dot_prd_ff : features -> features -> float
+\end{ocamldoccode}
+\index{dot-underscoreprd-underscoreff@\verb`dot_prd_ff`}
+
+
+
+
+\label{val:Util.dot-underscoreprd-underscorefw}\begin{ocamldoccode}
+val dot_prd_fw : features -> float array -> float
+\end{ocamldoccode}
+\index{dot-underscoreprd-underscorefw@\verb`dot_prd_fw`}
+
+
+
+
+\label{val:Util.split}\begin{ocamldoccode}
+val split : ?max:int -> string -> string list
+\end{ocamldoccode}
+\index{split@\verb`split`}
+
+
+
+
+\label{val:Util.splita}\begin{ocamldoccode}
+val splita : ?max:int -> string -> string array
+\end{ocamldoccode}
+\index{splita@\verb`splita`}
+
+
+
+
+\label{val:Util.lines-underscoreof-underscorestr}\begin{ocamldoccode}
+val lines_of_str : ?comment_str:string -> string -> string array
+\end{ocamldoccode}
+\index{lines-underscoreof-underscorestr@\verb`lines_of_str`}
+\begin{ocamldocdescription}
+{\tt{lines\_of\_str s}} returns (XXX non-empty), non-commented lines of string {\tt{s}}, and strips off comments
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Util.lines-underscoreof-underscorefile}\begin{ocamldoccode}
+val lines_of_file : ?comment_str:string -> string -> string array
+\end{ocamldoccode}
+\index{lines-underscoreof-underscorefile@\verb`lines_of_file`}
+\begin{ocamldocdescription}
+{\tt{lines\_of\_file f}} returns non-empty, white-space stripped, non-commented lines of file {\tt{f}}
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Util.min-underscoreitemi}\begin{ocamldoccode}
+val min_itemi : 'a array -> int * 'a
+\end{ocamldoccode}
+\index{min-underscoreitemi@\verb`min_itemi`}
+
+
+
+
+\label{val:Util.min-underscoreitem}\begin{ocamldoccode}
+val min_item : 'a array -> 'a
+\end{ocamldoccode}
+\index{min-underscoreitem@\verb`min_item`}
+
+
+
+
+\label{val:Util.max-underscoreitemi}\begin{ocamldoccode}
+val max_itemi : 'a array -> int * 'a
+\end{ocamldoccode}
+\index{max-underscoreitemi@\verb`max_itemi`}
+
+
+
+
+\label{val:Util.max-underscoreitem}\begin{ocamldoccode}
+val max_item : 'a array -> 'a
+\end{ocamldoccode}
+\index{max-underscoreitem@\verb`max_item`}
+
+
+
+
+\label{val:Util.max-underscorein-underscoreht}\begin{ocamldoccode}
+val max_in_ht : ('a, 'b) Ht.t -> 'a * 'b
+\end{ocamldoccode}
+\index{max-underscorein-underscoreht@\verb`max_in_ht`}
+
+
+
+
+\label{val:Util.min-underscorein-underscoreht}\begin{ocamldoccode}
+val min_in_ht : ('a, 'b) Ht.t -> 'a * 'b
+\end{ocamldoccode}
+\index{min-underscorein-underscoreht@\verb`min_in_ht`}
+
+
+
+
+\label{val:Util.min-underscoremax-underscoreitems}\begin{ocamldoccode}
+val min_max_items : 'a array -> 'a * 'a
+\end{ocamldoccode}
+\index{min-underscoremax-underscoreitems@\verb`min_max_items`}
+
+
+
+
+\label{val:Util.factorial}\begin{ocamldoccode}
+val factorial : Num.num -> Num.num
+\end{ocamldoccode}
+\index{factorial@\verb`factorial`}
+
+
+
+
+\label{val:Util.fact}\begin{ocamldoccode}
+val fact : int -> int
+\end{ocamldoccode}
+\index{fact@\verb`fact`}
+
+
+
+
+\label{val:Util.choose}\begin{ocamldoccode}
+val choose : int -> int -> int
+\end{ocamldoccode}
+\index{choose@\verb`choose`}
+
+
+
+
+\label{val:Util.sum}\begin{ocamldoccode}
+val sum : float array -> float array -> float array
+\end{ocamldoccode}
+\index{sum@\verb`sum`}
+
+
+
+
+\label{val:Util.round}\begin{ocamldoccode}
+val round : float -> int
+\end{ocamldoccode}
+\index{round@\verb`round`}
+
+
+
+
+\label{val:Util.parse-underscorefeatures}\begin{ocamldoccode}
+val parse_features : string list -> (int, float) Ht.t
+\end{ocamldoccode}
+\index{parse-underscorefeatures@\verb`parse_features`}
+
+
+
+
+\label{val:Util.parse-underscoredata-underscoreline}\begin{ocamldoccode}
+val parse_data_line :
+  ?global:string ->
+  ?m:int -> ?single:int option -> string -> instance list
+\end{ocamldoccode}
+\index{parse-underscoredata-underscoreline@\verb`parse_data_line`}
+
+
+
+
+\label{val:Util.parse-underscoredata-underscorefile}\begin{ocamldoccode}
+val parse_data_file :
+  ?verbose:int ->
+  ?multi:bool -> ?single:int option -> Pervasives.in_channel -> data * int
+\end{ocamldoccode}
+\index{parse-underscoredata-underscorefile@\verb`parse_data_file`}
+
+
+
+
+\label{val:Util.get-underscorelabels}\begin{ocamldoccode}
+val get_labels : data -> label array
+\end{ocamldoccode}
+\index{get-underscorelabels@\verb`get_labels`}
+
+
+
+
+\label{val:Util.get-underscorehighest-underscorefeature}\begin{ocamldoccode}
+val get_highest_feature : data -> int
+\end{ocamldoccode}
+\index{get-underscorehighest-underscorefeature@\verb`get_highest_feature`}
+
+
+
+
+\label{val:Util.sign}\begin{ocamldoccode}
+val sign : int -> int
+\end{ocamldoccode}
+\index{sign@\verb`sign`}
+
+
+
+
+\label{val:Util.get-underscoremean-underscoredev}\begin{ocamldoccode}
+val get_mean_dev : float list -> float * float
+\end{ocamldoccode}
+\index{get-underscoremean-underscoredev@\verb`get_mean_dev`}
+
+
+
+
+\label{val:Util.id}\begin{ocamldoccode}
+val id : 'a -> 'a
+\end{ocamldoccode}
+\index{id@\verb`id`}
+
+
+
+
+\label{val:Util.deep-underscorecopy}\begin{ocamldoccode}
+val deep_copy : 'a Pervasives.ref Dray.t -> 'a Pervasives.ref Dray.t
+\end{ocamldoccode}
+\index{deep-underscorecopy@\verb`deep_copy`}
+
+
+
+
+\label{val:Util.mht-underscoreto-underscoreht}\begin{ocamldoccode}
+val mht_to_ht : ('a, 'b) Hashtbl.t -> ('a, 'b array) Hashtbl.t
+\end{ocamldoccode}
+\index{mht-underscoreto-underscoreht@\verb`mht_to_ht`}
+\begin{ocamldocdescription}
+Takes a multi hashtable h and returns a new Hashtable with exactly one entry
+    for each key in h, mapped to an array of all bindings of that key in h.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Util.hs-underscoreof-underscorelist}\begin{ocamldoccode}
+val hs_of_list : 'a list -> 'a Hs.t
+\end{ocamldoccode}
+\index{hs-underscoreof-underscorelist@\verb`hs_of_list`}
+
+
+
+
+\label{val:Util.hs-underscoreof-underscorearray}\begin{ocamldoccode}
+val hs_of_array : 'a array -> 'a Hs.t
+\end{ocamldoccode}
+\index{hs-underscoreof-underscorearray@\verb`hs_of_array`}
+
+
+
+
+\label{val:Util.array-underscoreto-underscorehs}\begin{ocamldoccode}
+val array_to_hs : 'a array -> 'a Hs.t
+\end{ocamldoccode}
+\index{array-underscoreto-underscorehs@\verb`array_to_hs`}
+
+
+
+
+\label{val:Util.output-underscoreline}\begin{ocamldoccode}
+val output_line : Pervasives.out_channel -> string -> unit
+\end{ocamldoccode}
+\index{output-underscoreline@\verb`output_line`}
+
+
+
+
+\label{val:Util.shuffle-underscorelist}\begin{ocamldoccode}
+val shuffle_list : ?seed:int option -> 'a list -> 'a list
+\end{ocamldoccode}
+\index{shuffle-underscorelist@\verb`shuffle_list`}
+
+
+
+
+\label{val:Util.list-underscoreexcept}\begin{ocamldoccode}
+val list_except : int -> 'a list -> 'a list
+\end{ocamldoccode}
+\index{list-underscoreexcept@\verb`list_except`}
+
+
+
+
+\label{val:Util.memoize}\begin{ocamldoccode}
+val memoize : ('a -> 'b) -> 'a -> 'b
+\end{ocamldoccode}
+\index{memoize@\verb`memoize`}
+
+
+
+
+\label{val:Util.memoize-underscorerec}\begin{ocamldoccode}
+val memoize_rec : (('a -> 'b) -> 'a -> 'b) -> 'a -> 'b
+\end{ocamldoccode}
+\index{memoize-underscorerec@\verb`memoize_rec`}
+
+
+
+
+\label{val:Util.matrix-underscoreto-underscorestr}\begin{ocamldoccode}
+val matrix_to_str : ('a -> string) -> 'a array array -> string
+\end{ocamldoccode}
+\index{matrix-underscoreto-underscorestr@\verb`matrix_to_str`}
+
+
+
+
+\label{val:Util.print}\begin{ocamldoccode}
+val print : string -> unit
+\end{ocamldoccode}
+\index{print@\verb`print`}
+
+
+
+
+\label{val:Util.brintf}\begin{ocamldoccode}
+val brintf : ('a, unit, string, unit) Pervasives.format4 -> 'a
+\end{ocamldoccode}
+\index{brintf@\verb`brintf`}
+
+
+
+
+\label{val:Util.ebrintf}\begin{ocamldoccode}
+val ebrintf : ('a, unit, string, unit) Pervasives.format4 -> 'a
+\end{ocamldoccode}
+\index{ebrintf@\verb`ebrintf`}
+
+
+\section{Module {\tt{Lattice}} : The lattice module.}
+\label{module:Lattice}\index{Lattice@\verb`Lattice`}
+  NB:  weights on edges should represent probabilities, but
+     they needn't sum to one.  i.e. the structure of the lattice may have implicit 
+     conditioning on some outside event.
+
+
+
+\ocamldocvspace{0.5cm}
+
+
+
+\label{type:Lattice.node}\begin{ocamldoccode}
+type node = int * int 
+\end{ocamldoccode}
+\index{node@\verb`node`}
+\begin{ocamldocdescription}
+{\tt{(i,j)}} represents the {\tt{j}}th state at time {\tt{i}}
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{type:Lattice.lattice}\begin{ocamldoccode}
+type 'a lattice = \{
+  nodes : 'a array array ;
+\end{ocamldoccode}
+\begin{ocamldoccomment}
+{\tt{nodes.(i).(j)}} represents state {\tt{j}} at time {\tt{i}}
+\end{ocamldoccomment}
+\begin{ocamldoccode}
+  edges_from : (node, (node * float) array) Util.Ht.t ;
+  edges_to : (node, (node * float) array) Util.Ht.t ;
+  edges : (node * node, float) Util.Ht.t ;
+\end{ocamldoccode}
+\begin{ocamldoccomment}
+edges and their weights
+\end{ocamldoccomment}
+\begin{ocamldoccode}
+  mutable alphas : (node, float) Util.Ht.t option ;
+  mutable betas : (node, float) Util.Ht.t option ;
+  mutable z : float option ;
+\}
+\end{ocamldoccode}
+\index{lattice@\verb`lattice`}
+
+
+
+
+\label{val:Lattice.mk-underscorelattice}\begin{ocamldoccode}
+val mk_lattice :
+  'a array array ->
+  (node * node, float) Util.Ht.t -> 'a lattice
+\end{ocamldoccode}
+\index{mk-underscorelattice@\verb`mk_lattice`}
+\begin{ocamldocdescription}
+{\tt{mk\_lattice nodes edges}} makes a lattice datatype.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscoreviterbi-underscorepath}\begin{ocamldoccode}
+val get_viterbi_path : 'a lattice -> 'b -> node list
+\end{ocamldoccode}
+\index{get-underscoreviterbi-underscorepath@\verb`get_viterbi_path`}
+\begin{ocamldocdescription}
+{\tt{get\_viterbi\_path l}} returns the highest probability path through lattice {\tt{l}}.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscoreviterbi-underscoresymbols}\begin{ocamldoccode}
+val get_viterbi_symbols : 'a lattice -> 'b -> 'a list
+\end{ocamldoccode}
+\index{get-underscoreviterbi-underscoresymbols@\verb`get_viterbi_symbols`}
+\begin{ocamldocdescription}
+{\tt{get\_viterbi\_symbols l}} returns the symbols along the highest probability path
+    through lattice {\tt{l}}.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscorealphas}\begin{ocamldoccode}
+val get_alphas : 'a lattice -> (node, float) Util.Ht.t
+\end{ocamldoccode}
+\index{get-underscorealphas@\verb`get_alphas`}
+\begin{ocamldocdescription}
+alpha.(i).(j) is alpha\_j (i) in Mike Collins' notation
+    i.e. alpha.(i).(j) is the sum of weights of all paths from the source to Node (i,j) 
+    {\tt{i.e. state j at time i}}
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscorebetas}\begin{ocamldoccode}
+val get_betas : 'a lattice -> (node, float) Util.Ht.t
+\end{ocamldoccode}
+\index{get-underscorebetas@\verb`get_betas`}
+\begin{ocamldocdescription}
+beta.(i).(j) is beta\_j (i) in Mike Collins' notation 
+    i.e. beta.(i).(j) is the sum of weights of all paths from Node (i,j) to the target
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscorez}\begin{ocamldoccode}
+val get_z : 'a lattice -> float
+\end{ocamldoccode}
+\index{get-underscorez@\verb`get_z`}
+\begin{ocamldocdescription}
+Get the sum of weights of all paths through the lattice (partition function).
+    If the lattice represents a markov model conditioned on some fact, then this
+    will give us the probability of that fact.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscorenode-underscoreprob}\begin{ocamldoccode}
+val get_node_prob : 'a lattice -> node -> float
+\end{ocamldoccode}
+\index{get-underscorenode-underscoreprob@\verb`get_node_prob`}
+\begin{ocamldocdescription}
+{\tt{get\_node\_prob l n}} returns the probability of passing through node {\tt{n}} in 
+    lattice {\tt{l}}.
+
+
+\end{ocamldocdescription}
+
+
+
+
+\label{val:Lattice.get-underscoreedge-underscoreprob}\begin{ocamldoccode}
+val get_edge_prob : 'a lattice -> node -> node -> float
+\end{ocamldoccode}
+\index{get-underscoreedge-underscoreprob@\verb`get_edge_prob`}
+\begin{ocamldocdescription}
+{\tt{get\_edge\_prob l src trg}} returns the probability of traversing the edge from 
+    node {\tt{src}} to node {\tt{trg}} in lattice {\tt{l}}.
+
+
+\end{ocamldocdescription}
+
+
+\end{document}

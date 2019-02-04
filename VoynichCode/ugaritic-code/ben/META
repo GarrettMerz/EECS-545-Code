@@ -1,0 +1,4 @@
+version="1.0"
+requires = "str extlib hashSet unix num camomile myDynArray batteries batteries.pa_strings.syntax batteries.pa_comprehension.syntax batteries.pa_openin.syntax"
+archive(byte)="ben.cma"
+archive(native)="ben.cmxa"

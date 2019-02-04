@@ -1,0 +1,15 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.Ht.to_sorted_array</title>
+</head>
+<body>
+<code class="code"><span class="keyword">let</span>&nbsp;to_sorted_array&nbsp;ht&nbsp;=&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;res&nbsp;=&nbsp;to_array&nbsp;ht&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="constructor">A</span>.fast_sort&nbsp;(<span class="keyword">fun</span>&nbsp;(k,v)&nbsp;(k',v')&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;compare&nbsp;v&nbsp;v')&nbsp;res;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;res</code></body></html>

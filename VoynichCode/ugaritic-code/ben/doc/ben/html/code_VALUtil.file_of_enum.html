@@ -1,0 +1,15 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.file_of_enum</title>
+</head>
+<body>
+<code class="code"><span class="keyword">let</span>&nbsp;file_of_enum&nbsp;file_name&nbsp;(enum&nbsp;:&nbsp;string&nbsp;<span class="constructor">E</span>.t)&nbsp;=<br>
+&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;out_ch&nbsp;=&nbsp;open_out&nbsp;file_name&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;output_enum&nbsp;out_ch&nbsp;enum;<br>
+&nbsp;&nbsp;close_out&nbsp;out_ch</code></body></html>

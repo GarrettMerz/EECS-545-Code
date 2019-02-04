@@ -1,0 +1,79 @@
+START
+START	w:0	w
+w:0
+START	ty:0	t
+ty:0	ty:1	y
+ty:1
+START	h:0	h
+h:0
+START	t:0	t
+t:0
+START	m:0	m
+m:0
+START	tm:0	t
+tm:0	tm:1	m
+tm:1
+START	k:0	k
+k:0
+START	ny:0	n
+ny:0	ny:1	y
+ny:1
+START	nw:0	n
+nw:0	nw:1	w
+nw:1
+START	tyk:0	t
+tyk:0	tyk:1	y
+tyk:1	tyk:2	k
+tyk:2
+START	th:0	t
+th:0	th:1	h
+th:1
+START	wm:0	w
+wm:0	wm:1	m
+wm:1
+START	wny:0	w
+wny:0	wny:1	n
+wny:1	wny:2	y
+wny:2
+START	km:0	k
+km:0	km:1	m
+km:1
+START	wk:0	w
+wk:0	wk:1	k
+wk:1
+START	tyw:0	t
+tyw:0	tyw:1	y
+tyw:1	tyw:2	w
+tyw:2
+START	yw:0	y
+yw:0	yw:1	w
+yw:1
+START	tny:0	t
+tny:0	tny:1	n
+tny:1	tny:2	y
+tny:2
+START	n:0	n
+n:0
+START	wh:0	w
+wh:0	wh:1	h
+wh:1
+START	whw:0	w
+whw:0	whw:1	h
+whw:1	whw:2	w
+whw:2
+START	tw:0	t
+tw:0	tw:1	w
+tw:1
+START	tyh:0	t
+tyh:0	tyh:1	y
+tyh:1	tyh:2	h
+tyh:2
+START	tnw:0	t
+tnw:0	tnw:1	n
+tnw:1	tnw:2	w
+tnw:2
+START	thw:0	t
+thw:0	thw:1	h
+thw:1	thw:2	w
+thw:2
+END

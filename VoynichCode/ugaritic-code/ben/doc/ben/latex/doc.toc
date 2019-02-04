@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Module {\tt {Util}} : Various utility types and functions of my own devising}{1}
+\contentsline {section}{\numberline {2}Module {\tt {Lattice}} : The lattice module.}{10}

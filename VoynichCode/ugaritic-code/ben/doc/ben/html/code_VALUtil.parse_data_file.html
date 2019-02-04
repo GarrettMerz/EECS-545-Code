@@ -1,0 +1,42 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Lattice" rel="Chapter" href="Lattice.html"><title>Util.parse_data_file</title>
+</head>
+<body>
+<code class="code"><span class="keyword">let</span>&nbsp;parse_data_file&nbsp;?(verbose=1)&nbsp;?(multi=<span class="keyword">false</span>)&nbsp;?(single=<span class="constructor">None</span>)&nbsp;data_file&nbsp;:&nbsp;data&nbsp;*&nbsp;int&nbsp;=&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;global&nbsp;=&nbsp;ref&nbsp;<span class="string">""</span>&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;<span class="keyword">rec</span>&nbsp;get_next_line&nbsp;df&nbsp;=&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;res&nbsp;=&nbsp;<span class="constructor">S</span>.strip&nbsp;(input_line&nbsp;df)&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span>&nbsp;res.[0]&nbsp;=&nbsp;<span class="string">'.'</span>&nbsp;<span class="keyword">then</span>&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">begin</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keyword">match</span>&nbsp;<span class="constructor">Str</span>.bounded_split&nbsp;(<span class="constructor">Str</span>.regexp&nbsp;<span class="string">"."</span>)&nbsp;res&nbsp;1&nbsp;<span class="keyword">with</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;[g]&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;global&nbsp;:=&nbsp;<span class="constructor">S</span>.strip&nbsp;g<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;[]&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;global&nbsp;:=&nbsp;<span class="string">""</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;_&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;failwith&nbsp;<span class="string">"shouldn't&nbsp;happen&nbsp;33"</span>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get_next_line&nbsp;df<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">end</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>&nbsp;res&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;fst_ln&nbsp;=&nbsp;get_next_line&nbsp;data_file&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;m&nbsp;=&nbsp;<span class="keyword">if</span>&nbsp;multi&nbsp;<span class="keyword">then</span>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">String</span>.length&nbsp;(<span class="constructor">Str</span>.global_replace&nbsp;(<span class="constructor">Str</span>.regexp&nbsp;<span class="string">"-"</span>)&nbsp;<span class="string">""</span>&nbsp;(<span class="constructor">L</span>.hd&nbsp;(split&nbsp;fst_ln)))&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>&nbsp;1&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;instances&nbsp;=&nbsp;<span class="constructor">Dray</span>.make&nbsp;1000&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;<span class="constructor">L</span>.iter&nbsp;(<span class="constructor">Dray</span>.add&nbsp;instances)&nbsp;(parse_data_line&nbsp;~global:!global&nbsp;~m&nbsp;~single&nbsp;fst_ln);<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;count&nbsp;=&nbsp;ref&nbsp;0&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;(<span class="keyword">try</span>&nbsp;<span class="keyword">while</span>&nbsp;<span class="keyword">true</span>&nbsp;<span class="keyword">do</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keyword">if</span>&nbsp;!count&nbsp;<span class="keyword">mod</span>&nbsp;50&nbsp;=&nbsp;0&nbsp;<span class="keywordsign">&amp;&amp;</span>&nbsp;verbose&nbsp;&gt;&nbsp;1&nbsp;<span class="keyword">then</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(print_int&nbsp;!count;&nbsp;print_string&nbsp;<span class="string">"..."</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;incr&nbsp;count;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;ln&nbsp;=&nbsp;get_next_line&nbsp;data_file&nbsp;<span class="keyword">in</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">L</span>.iter&nbsp;(<span class="constructor">Dray</span>.add&nbsp;instances)&nbsp;(parse_data_line&nbsp;~global:!global&nbsp;~m&nbsp;~single&nbsp;ln))&nbsp;<br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">done</span><br>
+&nbsp;&nbsp;&nbsp;<span class="keyword">with</span>&nbsp;<span class="constructor">End_of_file</span>&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;());<br>
+&nbsp;&nbsp;flush&nbsp;stdout;<br>
+&nbsp;&nbsp;(<span class="constructor">Dray</span>.to_list&nbsp;instances),&nbsp;m</code></body></html>
