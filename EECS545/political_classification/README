@@ -1,0 +1,104 @@
+GIT HELP
+------------------------------------------------------------------
+When starting a new work session do 
+
+>>cd partyAffiliationML
+>>git pull
+
+If everything goes well, great! There are two types of errors you
+might run into:
+
+1) merge conflicts. i.e. someone else changed a file and pushed it
+and you've also changed the file and git can't figure out what
+exactly it should keep -- open the file and look for lines
+bracketed by <<<<< and >>>>> to solve merge conflicts, then add,
+commit, and push changes (see below)
+
+2) you have existing changes and git wants you to commit those
+before you pull. You have two options: commit changes if you
+want to keep them, or use git stash to discard all changes to
+your local files
+
+Now, assuming everything was pulled successfully, you can go ahead
+and make changes! On a regular basis you should commit these changes
+
+To check on the status of your local branch use
+
+>>git status
+
+To begin the process of commiting changes, use
+
+>>git add -A
+>>git commit -m "message about commit"
+
+You can commit as many times as you want, the more the better.
+When you want to push those changes so the rest of the group
+can access them, use
+
+>> git push
+
+Most problems can be solved with a simple google search. If not,
+contact Rory.
+
+
+------------------------------------------------------------------
+SCRAPING TEXT
+
+We use data stored at http://www.presidency.ucsb.edu/index.php
+
+scrape.py will download all the files listed on a webpage with
+a form like:
+
+http://www.presidency.ucsb.edu/2016_election_speeches.php?candidate=70&campaign=2016CLINTON&doctype=5000
+
+the shell script runScraper.sh contains examples for executing the
+python scrip. 
+
+scrape.py will save one file per speech with the following path:
+
+data/rawtext/[electionyear]/[D/R]/[speakerinitial]_[filenum]
+
+a list of all the files in a particular directory is save in files.list
+
+NOTES:
+
+HC_0 - HC_106 were removed because they were dated in 2007 and 2008
+long before the 2016 campaign.
+
+**** in 2012, Obama gave the same speech repeatedly, and this is
+probably a bad sample for traing and testing. We should avoid using
+on the dem side.
+
+
+------------------------------------------------------------------
+PROCESSING TEXT
+
+There are a set of python files titled getVocab*.py that can be
+used to create BoW files in the format we want to use. These
+require an input file list (.list) that lists the full paths
+of all input files (note: this path must include /D/ or /R/ to denote
+party affiliation)
+
+For now, we can split the output file outfile.dat into 2/3 train
+data and 1/3 test data using splitData.py noting that there is no
+randomization involved in this process
+
+There are two types of data files:
+
+SPARSE.dat
+
+DENSE.X.dat, DENSE.Y.dat
+
+which follow the same format as the files provided for hw2.
+
+------------------------------------------------------------------
+ANALYZING TEXT
+
+NaiveBayes.py:
+
+	Naive Bayes, no crossvalidation.
+
+basicSVM.py:
+
+	Simple implementation of scikit.svm.LinearSVC that uses 5-fold
+	cross validation on dataset.

@@ -1,0 +1,12 @@
+\BOOKMARK [0][-]{section*.2}{Classifying Party Affiliation Based on Campaign Rhetoric}{}% 2
+\BOOKMARK [1][-]{section*.1}{Abstract}{section*.2}% 1
+\BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
+\BOOKMARK [1][-]{section*.4}{Datasets and Data Processing}{section*.2}% 4
+\BOOKMARK [1][-]{section*.5}{Classification Methods}{section*.2}% 5
+\BOOKMARK [2][-]{section*.6}{Robust SVMs}{section*.5}% 6
+\BOOKMARK [1][-]{section*.7}{Results}{section*.2}% 7
+\BOOKMARK [2][-]{section*.8}{Cross validation}{section*.7}% 8
+\BOOKMARK [2][-]{section*.9}{Predictions between years}{section*.7}% 9
+\BOOKMARK [2][-]{section*.10}{Predictive words}{section*.7}% 10
+\BOOKMARK [1][-]{section*.11}{Conclusions}{section*.2}% 11
+\BOOKMARK [1][-]{section*.12}{References}{section*.2}% 12
