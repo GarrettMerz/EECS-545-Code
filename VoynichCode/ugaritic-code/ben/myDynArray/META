@@ -1,4 +1,0 @@
-version="1.0"
-requires = "extlib"
-archive(byte)="myDynArray.cma"
-archive(native)="myDynArray.cmxa"

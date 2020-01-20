@@ -1,3 +1,0 @@
-BUILD_STRATEGY := pdflatex
-onlysources.tex := Z4Leptons2012Paper.tex
-neverclean := AC_cernlogo.pdf AC_atlaslogo.pdf

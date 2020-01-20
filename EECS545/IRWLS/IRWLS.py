@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
+#implement iteratively-reweighted least squares ("robust regression"), a form of regression that is less sensitive to outliers
+
 epsilon = 1e-10
 error = 1000000000
 
@@ -16,6 +18,7 @@ xtilde = np.hstack((np.ones((len(x),1)), x.reshape((len(x),1))))
 
 def weight(r):
  return 1/ np.sqrt(1+r*r)
+
 
 def WLS(X, C, y):
  return np.linalg.inv(X.transpose() @ np.diag(C) @ X) @ X.transpose() @ np.diag(C) @ y
@@ -33,6 +36,7 @@ while error > epsilon:
  error = np.linalg.norm(w-wold)
  print(iter, w, error)
 
+#plot ordinary least squares, IRWLS, and the true line used to generate the data
 plt.scatter(x, y)
 xest = np.array([[1, x.min()], [1,x.max()]])
 w_corr = [5, 10]

@@ -1,6 +1,0 @@
-#!/usr/bin/env python
-
-doc = 'Z4Leptons2012Paper'
-import os
-env = Environment(ENV=os.environ)
-pdfOutput = env.PDF(target=doc+'.pdf', source=doc+'.tex')

@@ -5,6 +5,8 @@ numspam = 0
 numgood = 0
 tokens_size = 1448
 
+
+#I construct a Naive Bayes classifier "spam filter" to detect spam emails
 probwordgivspam, probwordgivgood, spamsum, goodsum, logprobs = [0]*tokens_size, [0]*tokens_size, [0]*tokens_size, [0]*tokens_size, [0]*tokens_size
 
 with open('SPARSE.TRAIN.1400') as f:

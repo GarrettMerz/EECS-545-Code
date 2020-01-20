@@ -4,6 +4,8 @@ from scipy.special import expit as expit
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
+#Perform Logistic Regression on a labeled dataset. The algorithm converges in eight iterations.
+
 err = 10**8
 epsilon=10**-8
 w = array([0.0,0.0,0.0])

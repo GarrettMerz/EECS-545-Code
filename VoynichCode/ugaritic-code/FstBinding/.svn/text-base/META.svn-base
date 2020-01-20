@@ -1,3 +1,0 @@
-version="1.0"
-archive(byte)="openfst.cma"
-archive(native)="openfst.cmxa"
